@@ -24,10 +24,10 @@ description: Meus estudos sobre o mundo do DevSecOps e SysAdmin!!!
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
-    - Learn markdown: "http://www.markdowntutorial.com/"
-    - GitHub Pages: "https://pages.github.com/"
+  Projetos:
+    - Curso de Python: "https://github.com/clodonil/Python-Fundamentals"
+    - Bk_Gdrive: "https://github.com/clodonil/bk_gdrive"
+    - LabsVagrant: "https://github.com/clodonil/LabsVagrant"
   Author's home: "http://devsecops.com"
 
 # Image to show in the navigation bar - image must be a square (width = height)
