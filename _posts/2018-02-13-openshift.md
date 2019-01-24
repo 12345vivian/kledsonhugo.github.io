@@ -11,6 +11,9 @@ comments: true
 
 Segundo a Red Hat, Openshift é uma plataforma de aplicativos em containers que oferece as tecnologias Docker e Kubernetes para o ambiente Enterprise.
 
+![logo](../img/posts/2018-02-13-openshift/img4.png)
+
+
 Independência da arquitetura de aplicativos, o OpenShift permite criar, desenvolver e implantar os aplicativos de forma simples, rápida em qualquer infraestrutura, seja pública ou privada.
 
 Os principais elementos para instalar uma infraestrurura de OpenShift Enterprise são:
