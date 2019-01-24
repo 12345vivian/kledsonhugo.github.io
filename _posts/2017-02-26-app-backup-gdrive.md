@@ -1,7 +1,9 @@
 ---
 layout: post
-title: App para Backup de DataBase e Aplicação
+title: Backup de DataBase e Aplicação no Gdrive automatizado
 subtitle: Fazer backup do banco de dados e aplicação no cloud gdrive.
+gh-repo: clodonil/clodonil.github.io
+gh-badge: [star, fork, follow]
 tags: [Python, Gdrive]
 ---
 
