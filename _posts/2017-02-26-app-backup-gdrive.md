@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Backup de DataBase e Aplicação
-subtitle: Excerpt from Soulshaping by Jeff Brown
-bigimg: http://www.devops-sys.com.br/screenshot/bkmagento1.jpg
+title: App para Backup de DataBase e Aplicação
+subtitle: Fazer backup do banco de dados e aplicação no cloud gdrive.
 tags: [Python, Gdrive]
 ---
+
+Se você tem um e-commerce ou um aplicação pequeno e gostaria de implementar um backup automatizado tanto da aplicação como do banco de dados na cloud do google e tudo Free. Esse app é para você.
 
 # Backup do App em Google Drive
 
