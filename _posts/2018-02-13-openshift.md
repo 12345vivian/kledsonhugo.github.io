@@ -32,7 +32,7 @@ Hardware recomendado para execução do master:
 
 - *Etcd* :  O Etcd armazena o estado do master e os outros componentes. Utiliza essa informação para realizar mudança e se tornarem no estado desejado.  O Etcd pode ser opcionalmente configurado para alta disponibilidade.
 
-Hardware recomendado para execução do Etcd:
+    Hardware recomendado para execução do Etcd:
 
     |hardware	|Configuração|
     ------------|-------------
@@ -43,18 +43,18 @@ Hardware recomendado para execução do Etcd:
 
 - *Nodes*: Os nodes oferece o ambiente para execução dos containers. Cada nó em um cluster Kurnenetes possui os serviços necessários para serem gerenciados pelos master. Os Nodes também possuem serviços necessários para executar pods, tais como Docker, kubelet e um proxy de serviço.
 
-Hardware recomendado para execução do nodes:
+   Hardware recomendado para execução do nodes:
 
-|hardware|	Configuração|
----------|---------------|
-|vCPU	|1|
-|RAM	|8G|
-|Discos (/dev/sda):|
-|/var	|15G|
-|/usr/local/bin|	1G|
-|/	|50G|
-|Disco (/dev/sdb)|
-|docker storage|	50G|
+   |hardware|	Configuração|
+   ---------|---------------|
+   |vCPU	|1|
+   |RAM	|8G|
+   |Discos (/dev/sda):|
+   |/var	|15G|
+   |/usr/local/bin|	1G|
+   |/	|50G|
+   |Disco (/dev/sdb)|
+   |docker storage|	50G|
 
 Conforme descrito na listagem de hardware dos nodes, é importante ter um disco ou partição para o storage do docker.
 
@@ -62,7 +62,7 @@ Conforme descrito na listagem de hardware dos nodes, é importante ter um disco 
 
 Figura 1 - Servidores do Cluster OpenShift
 
-#Pré-requisitos
+# Pré-requisitos
 
 Antes de começar a instalar é importante lembrar que o Openshift requer um servidor de DNS para o pleno funcionamento. Adicionando os Masters, Etcd e os Nodes no arquivo de hosts não vai resolver.
 
