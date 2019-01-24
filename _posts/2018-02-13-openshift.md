@@ -288,7 +288,9 @@ Agora temos o Openshift instalado e funcional para receber os projetos.
 
 O processo para desinstalar o Openshift é bastante simples também:
 
+```bash
 $ ansible-playbook -i inventory.erb openshift-ansible/playbooks/adhoc/uninstall.yml
+```
 
 # Documentação:
 
