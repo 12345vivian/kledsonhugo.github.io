@@ -18,9 +18,8 @@ Os principais elementos para instalar uma infraestrurura de OpenShift Enterprise
 - *Master* :  O master pode ser um host ou um conjunto de hosts que contém os componentes 'master' do Openshift, tais como servidor de API,  servidor de controle de gerenciamento e Etcd. O master também gerencia os Nodes através de um cluster de Kubernete e escala os pods para rodar nos nodes.
 Hardware recomendado para execução do master:
 
-    -----------------------
     |hardware|Configuração|
-    -----------------------
+    |--------|-------------|
     |vCPU	| 2|
     |RAM	|16G|
     |Discos:|
@@ -33,7 +32,7 @@ Hardware recomendado para execução do master:
 Hardware recomendado para execução do Etcd:
 
     |hardware	|Configuração|
-    --------------------------
+    ------------|-------------
     |vCPU	|1|
     |RAM	|8G|
     |Discos:|
@@ -44,7 +43,7 @@ Hardware recomendado para execução do Etcd:
 Hardware recomendado para execução do nodes:
 
 |hardware|	Configuração|
--------------------------
+---------|---------------|
 |vCPU	|1|
 |RAM	|8G|
 |Discos (/dev/sda):|
@@ -57,6 +56,7 @@ Hardware recomendado para execução do nodes:
 Conforme descrito na listagem de hardware dos nodes, é importante ter um disco ou partição para o storage do docker.
 
 ![server](../img/posts/2018-02-13-openshift/img1.png)
+
 Figura 1 - Servidores do Cluster OpenShift
 
 #Pré-requisitos
@@ -288,6 +288,7 @@ O processo para desinstalar o Openshift é bastante simples também:
 $ ansible-playbook -i inventory.erb openshift-ansible/playbooks/adhoc/uninstall.yml
 
 # Documentação:
-[https://access.redhat.com/documentation/en-us/openshift_container_platform/3.7/pdf/installation_and_configuration/OpenShift_Container_Platform-3.7-Installation_and_Configuration-en-US.pdf
+
+- [OpenShift_Container_Platform-3.7-Installation_and_Configuration-en-US.pdf
 ](https://access.redhat.com/documentation/en-us/openshift_container_platform/3.7/pdf/installation_and_configuration/OpenShift_Container_Platform-3.7-Installation_and_Configuration-en-US.pdf)
 
