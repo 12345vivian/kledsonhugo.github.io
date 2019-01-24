@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Monitoramento de Tablespace do Oracle com Zabbix com LLD Test markdown
-subtitle: Each post also has a subtitle
+title: Monitoramento de Tablespace do Oracle com Zabbix com LLD 
+subtitle: Monitoramento das tablespace do banco de dados oracle no zabbix.
 gh-repo: clodonil/clodonil.github.io
 gh-badge: [star, fork, follow]
-tags: [LLD, ORACLE, PYTHON, TABLESPACE, ZABBIX]
+tags: [LLD, Oracle, Python, Tablespace, Zabbix]
 comments: true
 ---
 
