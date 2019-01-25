@@ -14,9 +14,9 @@ Nesse Lab, vamos seguir o seguinte conteúdo para conhecer sobre o puppet task.
 
 **Indice**
 1. *[Introdução ao Puppet Task](#p1)*
-    1. *[Instalação no Centos 7](#p1.1)*
-    1. *[Instalação no Windows](#p1.2)*
-    1. *[Conhecendo o bolt](#p1.3)*
+  1. *[Instalação no Centos 7](#p1.1)*
+  1. *[Instalação no Windows](#p1.2)*
+  1. *[Conhecendo o bolt](#p1.3)*
 2. [Criação e definição de nodes](#p2)
    2. [Provisionando em Vagrant](#p2.1)
    2. [Provisionando em Docker](#p2.2)
