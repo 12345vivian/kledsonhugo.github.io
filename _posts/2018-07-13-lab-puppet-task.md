@@ -12,26 +12,27 @@ Em outubro de 2017 a Puppet apresentou a sua nova aposta, o Puppet Tasks. Com is
 
 Nesse Lab, vamos seguir o seguinte conteúdo para conhecer sobre o puppet task.
 
-1 - [Introdução ao Puppet Task](#p1)
-  1.1 - Instalação no Centos 7
-  1.2 - Instalação no Windows
-2 - Conhecendo o bolt
-Criação e definição de nodes
-Provisionando em Vagrant
-Provisionando em Docker
-Manipulando os nodes
-Rodando comandos Shell nos nodes Linux
-Rodando comandos PowerShell no node Windows
-Rodando Scripts no Linux
-Rodando Scripts no Windows
-Upload de Arquivo
-Usando Package e Services
-Escrevendo as Tasks
-Tasks com parâmetros
-Controlando parâmetros com metadata
-Tasks com tratamento de error
-Escrevendo os Plans
-Referência
+**Indice**
+1. [Introdução ao Puppet Task](#p1)
+  1.1. [Instalação no Centos 7](#p1.1)
+  1.2. [Instalação no Windows](#p1.2)
+  1.3. [Conhecendo o bolt](#p1.3)
+2. [Criação e definição de nodes](#p2)
+  2.1. [Provisionando em Vagrant](#p2.1)
+  2.2. [Provisionando em Docker](#p2.2)
+3. [Manipulando os nodes](#p3)
+  3.1. [Rodando comandos Shell nos nodes Linux](#p3.1)
+  3.2. [Rodando comandos PowerShell no node Windows](#p3.2)
+  3.3. [Rodando Scripts no Linux](#p3.3)
+  3.4. [Rodando Scripts no Windows](#p3.4)
+  3.5. [Upload de Arquivo](#p3.6)
+  3.6. [Usando Package e Services](#p3.6)
+4. [Escrevendo as Tasks](#p4)
+  4.1. [Tasks com parâmetros](#p1.2)
+  4.2. [Controlando parâmetros com metadata](#p4.2)
+  4.3. [Tasks com tratamento de error](#p4.3)
+5. [Escrevendo os Plans](#p5)
+6. [Referência](#p6)
 
 Todos os códigos estão no repostório do [git](https://github.com/clodonil/puppet-tasks.git).
 
