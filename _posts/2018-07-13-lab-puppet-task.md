@@ -14,23 +14,23 @@ Nesse Lab, vamos seguir o seguinte conteúdo para conhecer sobre o puppet task.
 
 **Indice**
 1. *[Introdução ao Puppet Task](#p1)*
-  1. *[Instalação no Centos 7](#p1.1)*
-  1. *[Instalação no Windows](#p1.2)*
-  1. *[Conhecendo o bolt](#p1.3)*
+    1. *[Instalação no Centos 7](#p1.1)*
+    1. *[Instalação no Windows](#p1.2)*
+    1. *[Conhecendo o bolt](#p1.3)*
 2. [Criação e definição de nodes](#p2)
-  2.1. [Provisionando em Vagrant](#p2.1)
-  2.2. [Provisionando em Docker](#p2.2)
+   2. [Provisionando em Vagrant](#p2.1)
+   2. [Provisionando em Docker](#p2.2)
 3. [Manipulando os nodes](#p3)
-  3.1. [Rodando comandos Shell nos nodes Linux](#p3.1)
-  3.2. [Rodando comandos PowerShell no node Windows](#p3.2)
-  3.3. [Rodando Scripts no Linux](#p3.3)
-  3.4. [Rodando Scripts no Windows](#p3.4)
-  3.5. [Upload de Arquivo](#p3.6)
-  3.6. [Usando Package e Services](#p3.6)
+   3. [Rodando comandos Shell nos nodes Linux](#p3.1)
+   3. [Rodando comandos PowerShell no node Windows](#p3.2)
+   3. [Rodando Scripts no Linux](#p3.3)
+   3. [Rodando Scripts no Windows](#p3.4)
+   3. [Upload de Arquivo](#p3.6)
+   3. [Usando Package e Services](#p3.6)
 4. [Escrevendo as Tasks](#p4)
-  4.1. [Tasks com parâmetros](#p1.2)
-  4.2. [Controlando parâmetros com metadata](#p4.2)
-  4.3. [Tasks com tratamento de error](#p4.3)
+   4. [Tasks com parâmetros](#p1.2)
+   4. [Controlando parâmetros com metadata](#p4.2)
+   4. [Tasks com tratamento de error](#p4.3)
 5. [Escrevendo os Plans](#p5)
 6. [Referência](#p6)
 
