@@ -26,7 +26,7 @@ Para entendermos na prática como funciona essa conexão, vamos montar um LAB co
 
 Para provisionamento dessa infraestrutura, vamos utilizar o vagrant com virtualbox.
 
-Todos os códigos utilizados nesse laboratório estão no seguinte endereço: ([https://github.com/clodonil/Puppet_Task_com_PE_Orchestrator.git]https://github.com/clodonil/Puppet_Task_com_PE_Orchestrator.git)
+Todos os códigos utilizados nesse laboratório estão no seguinte endereço: [https://github.com/clodonil/Puppet_Task_com_PE_Orchestrator.git](https://github.com/clodonil/Puppet_Task_com_PE_Orchestrator.git)
 
 ```
 $ git clone https://github.com/clodonil/Puppet_Enteprise_com_Bolt.git
