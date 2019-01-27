@@ -105,32 +105,34 @@ Opções:
 
 Autenticação
 
-| Parametro |Descrição|
-|-------|----|
 |-u, --user|	Usuário para autenticação SSH/Winrm|
 |-p, --password |	Senha do usuário para autenticação
 |--private-key	|Chaves SSH para autenticação|
 
 Elevação de acesso:
 
---run-as	Usuário que será utilizado para elevação de acesso.
---sudo-password	Senha para elevação de acesso com sudo
+|--run-as	|Usuário que será utilizado para elevação de acesso.
+|--sudo-password	|Senha para elevação de acesso com sudo
+
 Parâmetros de execução:
 
--c, --concurrency	Número máximo de conexão simultânea (default 100)
---modulepath	Lista de diretórios dos módulos, separados por ",".
---configfile	Especifica o path do arquivo de configuração do bolt (default ~/.puppetlabs/bolt.yaml
---inventoryfile	Especifica o path do arquivo de inventário. (default ~/.puppetlabs/bolt/inventory.yaml
+|-c, --concurrency	|Número máximo de conexão simultânea (default 100)|
+|--modulepath	|Lista de diretórios dos módulos, separados por ",".|
+|--configfile	|Especifica o path do arquivo de configuração do bolt (default ~/.puppetlabs/bolt.yaml|
+|--inventoryfile	|Especifica o path do arquivo de inventário. (default ~/.puppetlabs/bolt/inventory.yaml|
+
 Transporte
 
---transport	Define o protocolo de transporte ssh, winrm,pcp, local;
---connect-timeout	Timeout de conexão
---[no--]tty	Ativa o pseudo terminal.
---tmpdir	Define o arquivo temporário para upload dos arquivos para execução nos nodes.
+|--transport	|Define o protocolo de transporte ssh, winrm,pcp, local;|
+|--connect-timeout	|Timeout de conexão|
+|--[no--]tty	|Ativa o pseudo terminal.|
+|--tmpdir	|Define o arquivo temporário para upload dos arquivos para execução nos nodes.|
+
 Muitos dos parâmetros podem ser configurados diretamente no arquivo do bolt, simplificando a execução do comando.
 
-Um exemplo do arquivo ~/.puppetlabs/bolt.yaml:
+Um exemplo do arquivo `~/.puppetlabs/bolt.yaml`:
 
+```
 modulepath: "/opt/modules:/etc/puppet/code/modules"
 inventoryfile: "~/.puppetlabs/bolt/inventory.yaml"
 format: human
@@ -144,18 +146,21 @@ log:
        ~/.bolt/debug.log:
             level: debug
             append: false
-2.  Criação e definição de nodes
+```
+
+#2.  Criação e definição de nodes
+
 Para realização deste laboratório será utilizado 2 nodes em Linux (Centos 7) e um node Windows. Nos servidores Linux a comunicação será realizada utilizando o SSH e no Windows o WinRM.
 
 Existe várias formas de realizar o provisionamento dos nodes, nesse lab usaremos o provisionamento em Docker e Vagrant com Virtualbox. O adotado para o restante do lab será o vagrant.
 
-2.1 Provisionando em Vagrant
+##2.1 Provisionando em Vagrant
+
 Considerando que o virtualbox e o vagrant está instalado, crie o Vagrantfile no diretório ~/puppet-task com o seguinte conteúdo.
 
+```
 # -*- mode: ruby -*-
-
 Vagrant.configure("2") do |config|
-
   #  Configure base
   config.vm.box = 'centos/7'
   config.ssh.forward_agent = true
@@ -168,7 +173,6 @@ Vagrant.configure("2") do |config|
          nodes.vm.hostname = "node#{id}"
          nodes.vm.network :private_network, :ip => "10.20.1.#{10+id}"
          nodes.vm.provision :hosts, :sync_hosts => true
-
     end
  end
 
@@ -191,24 +195,34 @@ Vagrant.configure("2") do |config|
     bolt.vm.provision "shell", inline: "rpm -ivh http://yum.puppet.com/puppet5/puppet5-release-el-7.noarch.rpm &&  yum -y install puppet-bolt"
   end
 end
+```
+
 Os seguintes plugins do vagrant devem estar instalados:
 
-vagrant-hosts (2.8.2)
-winrm (2.2.3)
-winrm-elevated (1.1.0)
-winrm-fs (1.2.0)
+- vagrant-hosts (2.8.2)
+- winrm (2.2.3)
+- winrm-elevated (1.1.0)
+- winrm-fs (1.2.0)
+
 Uma rápida explicação sobre o Vagrantfile, caso você não esteja familiarizado com essa tecnologia. A variável "$node_count" define a quantidade de nodes que serão criadas do centos 7 e a comunicação via SSH. Também está sendo provisionado uma máquina Windows (Nano Server) com a comunicação WinRM.
 
 A vm "bolt" será utilizado como manager para gerenciar os outros nodes. Para isso é necessário que essa vm acesse todas as outras. Para tornar isso possível, copie a chave de acesso para a pasta do puppet-task:
 
+```
 $ cp ~/.vagrant.d/insecure_private_key /puppet-task/
+```
+
 Para aplicar a configuração do vagrantfile e criar as máquinas virtuais, execute o comando:
 
+```
 $ vagrant up node1 node2 windows bolt
+```
+
 Uma forma rápida de acesso com o SSH ao nodes provisionados é criando um arquivo de ssh-config.
 
-Para isso acesse a vm bolt ("vagrant ssh bolt"), e como root crie o arquivo "generate-ssh.sh" e execute para criar o arquivo /root/.ssh/config.
+Para isso acesse a vm bolt ("vagrant ssh bolt"), e como root crie o arquivo "generate-ssh.sh" e execute para criar o arquivo `/root/.ssh/config`.
 
+```
 #!/bin/bash
 
 echo "" > /root/.ssh/config
@@ -228,45 +242,68 @@ do
    echo "    LogLevel FATAL" >> /root/.ssh/config
    echo "    ForwardAgent yes"   >> /root/.ssh/config
 done  < /etc/hosts
+```
+
 Executando o arquivo:
 
+```
 $ chmod +x generate-ssh.sh
 $ ./generate-ssh.sh
+```
+
 Para testar a conexão com os nodes:
 
+```
 $ ssh node1
 $ ssh node2
-2.2 Provisionando em Docker
-Usando o docker também é possível provisionar os servidores Linux de forma rápida. Para isso edit o arquivo "docker-compose.yml " e tenha instalado o docker.
+```
 
+##2.2 Provisionando em Docker
+
+Usando o docker também é possível provisionar os nodes Linux de forma rápida. Para isso edit o arquivo `docker-compose.yml` e tenha instalado o docker.
+
+```
 version: '3'
 services:
   ssh:
     image: rastasheep/ubuntu-sshd
     ports:
       - 22
+```
+
 Execute o seguinte comando para provisionar o servidor ubuntu com SSH.
 
+```
 $ docker-compose up -d
+```
+
 Caso você queira mais servidores, pode utilizar o --scale para determinar a quantidade de nodes.
 
+```
 $ docker-compose up --scale ssh=3 --detach
+```
+
 Não tem importância a forma de provisionar, basicamente os nodes Linux precisam ter SSH e WinRM nos servidores Windows. Portanto provisione da forma que você achar melhor.
 
-3.  Manipulando os nodes
+#3.  Manipulando os nodes
+
 Nos nodes provisionados é possível executar comandos, fazer upload de arquivos, rodar scripts e executar tasks e Plans.
 
 Tasks são tarefas (scripts) que serão executada nos nodes. A principal diferença entre as tasks e scripts é que as tasks recebem parâmetros e os parâmetros podem podem ser controlados.
 
-3.1  Rodando comandos shell nos nodes Linux
+##3.1  Rodando comandos shell nos nodes Linux
+
 Para executar comandos ad-hoc do bolt:
 
 Sintaxe:
 
+```
 $ bolt command run <comando> --nodes <nodes>
+```
 
 Como exemplo, é executado primeiramente o comando 'uptime' para retornar o tempo que o servidor está trabalhando:
 
+```
 $ bolt command run 'uptime' --nodes node1
 Started on node1...
 Finished on node1:
@@ -274,10 +311,13 @@ Finished on node1:
      13:30:04 up 14:56,  0 users,  load average: 0.02, 0.03, 0.05
 Successful on 1 node: node1
 Ran on 1 node in 0.72 seconds
-Em caso de erro 'Host key verification failled', existe um conflito de chaves do SSH, é preciso apagar as entradas relacionadas no arquivo ~/.ssh/sshd_hosts.
+```
+
+Em caso de erro `Host key verification failled`, existe um conflito de chaves do SSH, é preciso apagar as entradas relacionadas no arquivo `~/.ssh/sshd_hosts`.
 
 Também é possível executar comandos em múltiplos nodes ao mesmo tempo.
 
+```
 $ bolt command run 'uptime' --nodes node1,node2
 Started on node1...
 Started on node2...
@@ -289,43 +329,56 @@ Finished on node2:
      13:30:37 up 14:55,  0 users,  load average: 0.00, 0.01, 0.05
 Successful on 2 nodes: node1,node2
 Ran on 2 nodes in 0.71 seconds
-Para grandes números de nodes ou para agrupa-lós é necessário a criação do arquivo de inventory.yaml. Crie esse arquivo no diretório ~/.puppetlabs/bolt.
+```
 
+Para grandes números de nodes ou para agrupa-lós é necessário a criação do arquivo de `inventory.yaml`. Crie esse arquivo no diretório `~/.puppetlabs/bolt`.
+
+```
 nodes: [ node1, node2 ]
+```
+
 Em casos específicos, os nodes podem solicitar senha para autenticação, nesse caso é possível passar as informações ad-hoc na execução do bolt ou através da inclusão dos acessos no arquivo inventory.yaml.
 
+```
 Sintaxe:
-
 $bolt  command run <comando> --nodes all --user <login> --password <senha>
+```
 
 E no inventory:
 
+```
 Nodes: [node1, node2, node3] 
     config: 
          transports: 
               ssh: 
                  user    : <login> 
                  password: <senha>
+```
 
+##3.2 Rodando comandos PowerShell no node Windows
 
-3.2 Rodando comandos PowerShell no node Windows
 O bolt executa os comandos no Windows através do WinRM, conforme já mencionado anteriormente.
 
+```
 Sintaxe:
-
 $ bolt command run < comando> --nodes winrm://<node> --user <login> --password <senha>
+```
 
 No parâmetros WinRM é informado o endereço do servidor Windows. E caso seja necessário informar o usuário e senha, utilize o "--user" e o "--password".
 
-O bolt por padrão ativa a comunicação com SSL para comunicação com o WinRM, caso o servidor Windows não esteja com o SSL ativo, a conexão não vai ser realizado e uma mensagem de erro de comunicação será apresentado ("Unknown Protocol").
+O bolt por padrão ativa a comunicação com SSL para comunicação com o WinRM, caso o servidor Windows não esteja com o SSL ativo, a conexão não vai ser realizado e uma mensagem de erro de comunicação será apresentado **("Unknown Protocol")**.
 
-Para resolver esse erro é necessário ativar o SSL no WinRM no servidor Windows ou desativar a utilização do SSL pelo bolt através da opção --no-ssl.
+Para resolver esse erro é necessário ativar o SSL no WinRM no servidor Windows ou desativar a utilização do SSL pelo bolt através da opção '--no-ssl'.
 
 Para simplificar a sintaxe do comando, será criado uma variável "WIN" com o endereçamento do WinRM.
 
+```
 WIN="winrm://vagrant:vagrant@windows:5985"
+```
+
 A chamada do comando bolt fica mais limpa:
 
+```
 $ bolt command run "gps | select ProcessName" --no-ssl --nodes $WIN
 Started on windows...
 Finished on windows:
@@ -343,12 +396,13 @@ Finished on windows:
     svchost
     svchost
     svchost
-3.3 Rodando scripts no Linux
+```
+
+##3.3 Rodando scripts no Linux
 Com o bolt é possível executar qualquer tipo de scripts, desde o compilador/interpretador esteja presente no node. Perceba que não é necessário ter o interpretador no servidor manager.
 
 A sintaxe para executar scripts:
-
-$ bolt script run <script> --nodes <nodes>
+> $ bolt script run <script> --nodes <nodes>
 
 Nesse Lab vamos utilizar, bash para Linux e PowerShell para Windows.
 
@@ -356,9 +410,13 @@ Como exemplo de execução de script, será executado um harderning do Centos7.
 
 Faça o download do script no diretório /root/scripts. É necessário criar esse diretório.
 
+```
 $ curl -O https://raw.githubusercontent.com/naingyeminn/CentOS7_Lockdown/master/centos7.sh
+```
+
 O script de hardening aplica um conjunto de configurações para tornar o linux mais seguro. Devido o script alterar arquivos protegidos, é necessário ter acesso de root nas VMs. Dessa forma, informa o parâmetro "--run-as" para elevação de acesso:
 
+```
 $ bolt script run /root/script/centos7.sh --run-as root -n all
 Started on node2...
 Started on node1...
@@ -375,44 +433,64 @@ Finished on node2:
     Disabling Dovecot...
     Disabling Samba...
     Disabling HTTP Proxy Server...
+```
+
 Ao executar o script pelo bolt, primeiramente é feito o download nos nodes antes de executar.
 
-3.4 Rodando scripts no Windows
-Todos os administradores de sistema já têm um conjunto de scripts que executa nos servidores. Esses scripts podem ser reutilizados e serem facilmente aplicados em um conjunto de servidores. Caso você tenha um desses scripts pode utiliza-ló. Nesse exemplo vamos utilizar um script simples para teste de conexão.
+##3.4 Rodando scripts no Windows
+
+Todos os administradores de sistema já têm um conjunto de scripts para serem executados nos servidores. Esses scripts podem ser reutilizados e serem facilmente aplicados em um conjunto de servidores. Caso você tenha um desses scripts pode utiliza-ló. Nesse exemplo vamos utilizar um script simples para teste de conexão.
 
 Salve o conteúdo a seguir com o nome '/root/script/testconnection.ps1":
 
+```
 Test-Connection -ComputerName "example.com" -Count 3 -Delay 2 -TTL 255 -BufferSize 256 -ThrottleLimit 32
+```
+
 Executando o script:
 
+```
 $ bolt script run /root/script/testconnection.ps1 --no-ssl -n $WIN
-3.5 Upload de arquivo
+```
+
+##3.5 Upload de arquivo
+
 Um dos recursos normalmente utilizado na administração de servidores é o upload de arquivos. Normalmente durante um deploy é necessário enviar o pacote da aplicação para os servidores ou um conjunto de configuração conforme o ambiente.
 
 A sintaxe do upload de arquivo:
 
-$ bolt file /local_dir/file /server_dir/file  --nodes  all
+> $ bolt file /local_dir/file /server_dir/file  --nodes  all
 
 Para enviar uma atualização de pagina html para o servidor nginx, fica dessa forma:
 
-Crie o arquivo /root/files/index.html com qualquer conteúdo.
+Crie o arquivo `/root/files/index.html` com qualquer conteúdo.
 
+```
 $ bolt file upload /root/files/index.html /tmp/index.html --nodes node1
 Started on node1...
 Finished on node1:
   Uploaded '/root/files/index.html' to 'node1:/tmp/index.html'
 Successful on 1 node: node1
 Ran on 1 node in 1.14 seconds
-3.6 Usando Package
+```
+##3.6 Usando Package
+
 Através do bolt é possível gerenciar pacotes e servidores. No exemplo a seguir é instalado o pacote "httpd" no node node1. As opções possíveis do parâmetro "action" são "install/status/unistall/upgrade".
 
+```
 $ bolt task run package action => 'install', name => 'httpd', version => latest --nodes web
+```
+
 Além de gerenciar os pacotes, também é possível gerenciar os serviços. As opções do parâmetros action são "start/stop/restart/enable/disable/status".
 
+```
 $ bolt task run service action => status  name => httpd --nodes all
+```
+
 Para o bolt utilizaros pacotes e módulos do Forge, é necessário instalar a ferramenta r10k.
 
-4. Escrevendo Tasks
+#4. Escrevendo Tasks
+
 Igualmente aos scripts, as tasks podem ser escritos em qualquer linguagem de programação, desde que seja possível executar no node.
 
 As tasks devem ser utilizadas como um módulo do Puppet. Isso significa que podem ser manipuladas pelo Forge e também gerenciadas pelas ferramentas existentes do Puppet.
@@ -425,14 +503,18 @@ Por exemplo, o módulo "exercicio1" e a tasks deploy em  "exercicio1/tasks/depl
 
 As tasks também pode ter metadata que valida os argumentos de entrada e controla como as tasks vai ser executada. A definição das entradas de parâmetros no metadata também é uma forma de reduzir o risco de segurança.
 
-Como exemplo de tasks, crie o arquivo init.sh no diretório /modules/exercicio1/tasks:
+Como exemplo de tasks, crie o arquivo init.sh no diretório '/modules/exercicio1/tasks':
 
+```
 #!/bin/bash
 interface=$PT_interface
 ip=$(/sbin/ip add show $interface | grep "inet\b" | awk '{print $2}' | cut -d / -f 1 )
 echo $ip
+```
+
 Para executar a tasks padrão (init). Utilize o seguinte comando:
 
+```
 $ bolt task run exercicio1 interface=eth0 --nodes all --modulepath /modules/
 Started on node1...
 Started on node2...
@@ -446,12 +528,14 @@ Finished on node2:
   }
 Successful on 2 nodes: node1,node2
 Ran on 2 nodes in 1.21 seconds
+```
 Como o nome da tasks é "init", foi passado apenas o nome do módulo com o argumento interface  que dentro do script  fica como "PT_interface".
 
-Tasks mais elaboradas desenvolvidas em outras linguagens como Python e Ruby podem retornar dados mais estruturados (não estou dizendo que em bash não seja possível).
+Tasks mais elaboradas desenvolvidas em outras linguagens como `Python` e `Ruby` podem retornar dados mais estruturados (não estou dizendo que em bash não seja possível).
 
-Usando o exemplo do módulo exercicio1, crie mais uma tasks com o nome gethost.py com o seguinte conteúdo.
+Usando o exemplo do módulo exercicio1, crie mais uma tasks com o nome `gethost.py` com o seguinte conteúdo.
 
+```
 #!/usr/bin/env python
 
 import socket
@@ -473,9 +557,12 @@ else:
     result['_error'] = { 'msg': 'No host argument passed', 'kind': 'exercise5/missing_parameter' }
     print(json.dumps(result))
     sys.exit(1)
+```
+
 Pode executar a tasks da seguinte forma:
 
-bolt task run exercicio1::gethost host="google.com" --nodes all --modulepath /modules/
+```
+$ bolt task run exercicio1::gethost host="google.com" --nodes all --modulepath /modules/
 Started on node2...
 Started on node1...
 Finished on node2:
@@ -494,103 +581,135 @@ Finished on node1:
   }
 Successful on 2 nodes: node1,node2
 Ran on 2 nodes in 1.20 seconds
+```
+
 Nesse exemplo um pré-requisito para execução do script é a presença do python no nodes.
 
-4.1 Tasks com Parâmetros
-As tasks recebem os parâmetros basicamente através de variável de ambiente (environment) ou através de entrada padrão (stdin). A escolha do método de passagem de parâmetros  interfere diretamente na escrita do metadata e também no desenvolvido do próprio script.
+##4.1 Tasks com Parâmetros
+
+As tasks recebem os parâmetros basicamente através de variável de ambiente (environment) ou através de entrada padrão (stdin). A escolha do método de passagem de parâmetros interfere diretamente na escrita do metadata e também no desenvolvido do próprio script.
 
 A seguir temos alguns exemplos de recebimento de parâmetros em bash, ruby, python e PowerShell com passagem de parâmetros em stdin e environment. Para esses exemplos, crie o diretório exercicio2 no diretório modules.
 
-Bash
 Tasks em bash com env:
+
+```
 #!/bin/bash
 #filename: tasks_env_bash.sh
 
 params=$PT_params
 echo $params
+```
 Tasks em bash com stdin:
 
+```
 #!/bin/bash
 #filename: tasks_stdin_bash.sh
 
 read params
 echo $params
+```
 Comando para execução da tasks:
 
+```
 $ bolt task run exercicio2::tasks_env_bash params=10 --nodes all --modulepath /modules/
-
- Python
+```
 Tasks em python com env:
+
+```
 #!/usr/bin/env python
 #filename: tasks_env_python.py
 
 import os
 host = os.environ.get('PT_host')
 print(host)
+```
+
 Tasks em python com stdin:
 
+```
 #!/usr/bin/python
 #filename: tasks_stdin_python.py
 
 host=input()
 print(host)
+```
+
 Comando para execução da tasks:
 
+```
 $ bolt task run exercicio2::tasks_env_python host="server1" --nodes all --modulepath /modules
-
- Ruby
+```
 Tasks em ruby com env:
+
+```
 #!/usr/bin/ruby
 #filename: tasks_env_ruby.rb
 
 params = ENV["PT_valor"]
 puts("Parâmetro: #{params}")
+```
+
 Tasks em ruby com stdin:
 
+```
 #!/usr/bin/ruby
 #filename: tasks_stdin_ruby.rb
 
 params = STDIN.read
 puts("Parâmetros: #{params}")
+```
+
 Comando para executar a tasks Ruby:
+
+```
 $ bolt task run exercicio2::tasks_env_ruby valor=10 --nodes all --modulepath /modules
+``
+- **PowerShell**
 
-PowerShell
-Tasks em PowerShell
-[CmdletBinding()]
-Param(
-  [Parameter(Mandatory = $False)]
- [String]
-  $Name
-  )
+   Tasks em PowerShell
 
-if ($Name -eq $null -or $Name -eq "") {
-  Get-Process
-} else {
-  $processes = Get-Process -Name $Name
-  $result = @()
-  foreach ($process in $processes) {
-    $result += @{"Name" = $process.ProcessName;
-                 "CPU" = $process.CPU;
-                 "Memory" = $process.WorkingSet;
-                 "Path" = $process.Path;
-                 "Id" = $process.Id}
-  }
-  if ($result.Count -eq 1) {
-    ConvertTo-Json -InputObject $result[0] -Compress
-  } elseif ($result.Count -gt 1) {
-    ConvertTo-Json -InputObject @{"_items" = $result} -Compress
-  }
-}
-Sintaxe para execução da tasks no windows:
-$ bolt task run exercicio2::tasks_powershell --no-ssl --nodes $WIN --modulepath /modules
+   ```
+        [CmdletBinding()]
+      Param(
+        [Parameter(Mandatory = $False)]
+       [String]
+        $Name
+        )
+      
+      if ($Name -eq $null -or $Name -eq "") {
+        Get-Process
+      } else {
+        $processes = Get-Process -Name $Name
+        $result = @()
+        foreach ($process in $processes) {
+          $result += @{"Name" = $process.ProcessName;
+                       "CPU" = $process.CPU;
+                       "Memory" = $process.WorkingSet;
+                       "Path" = $process.Path;
+                       "Id" = $process.Id}
+        }
+        if ($result.Count -eq 1) {
+          ConvertTo-Json -InputObject $result[0] -Compress
+        } elseif ($result.Count -gt 1) {
+          ConvertTo-Json -InputObject @{"_items" = $result} -Compress
+        }
+      }
+   ```
 
-$ bolt task run exercicio2::tasks_powershell name=System --no-ssl --nodes $WIN --modulepath /modules
+   Sintaxe para execução da tasks no windows:
+
+   ```
+   $ bolt task run exercicio2::tasks_powershell --no-ssl --nodes $WIN --modulepath /modules
+   $ bolt task run exercicio2::tasks_powershell name=System --no-ssl --nodes $WIN --modulepath /modules
+   ```
 
 Sempre estamos passado o caminho que estão localizados os módulos, entretanto podemos adicionar essa informação no arquivo ~/.puppetlabs/bolt/bolt.yaml.
 
 modulepath: "/modules/"
-4.2 Controlando parâmetros com metadata
+
+##4.2 Controlando parâmetros com metadata
+
 Com os metadata é feito a documentação da tasks e também o controle dos parâmetros de entrada. O controle de parâmetros é importante para diminuir o risco de entrada de valores não desejáveis.
 
 A tabela a seguir, mostra os parâmetros e os valores padrões da configuração do arquivo de metadata.
