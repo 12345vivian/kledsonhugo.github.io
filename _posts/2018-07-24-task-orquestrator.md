@@ -21,6 +21,7 @@ Utilizar o transporte pcp possui várias vantagens, tais como:
 
 Para entendermos na prática como funciona essa conexão, vamos montar um LAB com a seguinte estrutura.
 
+![apply-vm](../img/posts/2018-07-24-task-orquestrator/img1.png)
 
 
 Para provisionamento dessa infraestrutura, vamos utilizar o vagrant com virtualbox.
@@ -99,7 +100,11 @@ $ vagrant up master
 Acessando PE via navegados com o seguinte acesso:
 
 > Login: admin
+
 > Senha: redepp
+
+![apply-vm](../img/posts/2018-07-24-task-orquestrator/img2.png)
+
 
 Agora vamos iniciar as vms devops, note1, node2 e node3:
 
@@ -110,6 +115,8 @@ $ vagrant up devops node1 node2 node3
 Durante o provisionamento, será instalado o bolt na vm devops e será enviado a solicitação de inclusão dos nodes no Puppet Enterprise.
 
 Após o provisionamento dos nodes, volte no Puppet Enterprise e aceite a inclusão dos nodes:
+
+![apply-vm](../img/posts/2018-07-24-task-orquestrator/img3.png)
 
 Para ativar os recursos de command, file_upload e script no PE é necessário instalar o módulo do Forge:
 
@@ -305,6 +312,7 @@ Ran on 1 node in 1.99 seconds
 
 Você pode abrir o navegado com o ip do node1 para verificar que o servidor está de fato rodando.
 
+![apply-vm](../img/posts/2018-07-24-task-orquestrator/img4.png)
 
 
 ## Consultando Nodes no PuppetDB
@@ -451,7 +459,15 @@ Finished: task service::linux with 1 failure in 1.9 sec
 
 Pode verificar pelo navegador que o servidor web de fato está rodando:
 
+![apply-vm](../img/posts/2018-07-24-task-orquestrator/img5.png)
 
 
 Um ponto bastante relevante de utilizar o bolt através do Puppet Enterprise é a parte de auditoria e rastreabilidade. No console do Puppet Enterprise, na aba 'jobs" é possível acompanhar todas as tasks executadas.
 
+![apply-vm](../img/posts/2018-07-24-task-orquestrator/img6.png)
+
+
+# Referência
+
+-[https://puppet.com/docs/bolt/0.x/bolt.html](https://puppet.com/docs/bolt/0.x/bolt.html)
+-[https://github.com/puppetlabs/bolt](https://github.com/puppetlabs/bolt)
