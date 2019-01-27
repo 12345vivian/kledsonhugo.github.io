@@ -46,7 +46,7 @@ Visando essa lacuna a Puppet lançou o recursos de Tasks, também conhecido com 
 
 Basicamente o Puppet Tasks é um conjunto de funções, tais como executar comandos remotamente, enviar arquivos, executar scripts, executar tarefas, gerenciar serviços  e instalar pacotes.
 
-![tasks](../img/posts/2018-07-13-lab-puppet-task/img7.png)
+![tasks](../img/posts/2018-07-13-lab-puppet-task/img1.png)
 
 Todas essas funções podem ser executadas ad-hoc, diretamente em um node. Além de executar ad-hoc os comandos, é possível criar um Plan que orquestra um conjunto de funções de forma ordenada, criando uma infinidades de possibilidades, e mais diretamente um forma poderosa de fazer deploy.
 
