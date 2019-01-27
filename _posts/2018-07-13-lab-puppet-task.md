@@ -297,9 +297,7 @@ Para executar comandos ad-hoc do bolt:
 
 Sintaxe:
 
-```
-$ bolt command run <comando> --nodes <nodes>
-```
+> $ bolt command run <comando> --nodes <nodes>
 
 Como exemplo, é executado primeiramente o comando 'uptime' para retornar o tempo que o servidor está trabalhando:
 
@@ -339,10 +337,11 @@ nodes: [ node1, node2 ]
 
 Em casos específicos, os nodes podem solicitar senha para autenticação, nesse caso é possível passar as informações ad-hoc na execução do bolt ou através da inclusão dos acessos no arquivo inventory.yaml.
 
-```
+
 Sintaxe:
-$bolt  command run <comando> --nodes all --user <login> --password <senha>
-```
+
+> $bolt  command run <comando> --nodes all --user <login> --password <senha>
+
 
 E no inventory:
 
@@ -359,10 +358,9 @@ Nodes: [node1, node2, node3]
 
 O bolt executa os comandos no Windows através do WinRM, conforme já mencionado anteriormente.
 
-```
 Sintaxe:
-$ bolt command run < comando> --nodes winrm://<node> --user <login> --password <senha>
-```
+
+> $ bolt command run < comando> --nodes winrm://<node> --user <login> --password <senha>
 
 No parâmetros WinRM é informado o endereço do servidor Windows. E caso seja necessário informar o usuário e senha, utilize o "--user" e o "--password".
 
@@ -402,6 +400,7 @@ Finished on windows:
 Com o bolt é possível executar qualquer tipo de scripts, desde o compilador/interpretador esteja presente no node. Perceba que não é necessário ter o interpretador no servidor manager.
 
 A sintaxe para executar scripts:
+
 > $ bolt script run <script> --nodes <nodes>
 
 Nesse Lab vamos utilizar, bash para Linux e PowerShell para Windows.
