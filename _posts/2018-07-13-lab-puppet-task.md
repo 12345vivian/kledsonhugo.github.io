@@ -148,13 +148,13 @@ log:
             append: false
 ```
 
-#2.  Criação e definição de nodes
+# 2.  Criação e definição de nodes
 
 Para realização deste laboratório será utilizado 2 nodes em Linux (Centos 7) e um node Windows. Nos servidores Linux a comunicação será realizada utilizando o SSH e no Windows o WinRM.
 
 Existe várias formas de realizar o provisionamento dos nodes, nesse lab usaremos o provisionamento em Docker e Vagrant com Virtualbox. O adotado para o restante do lab será o vagrant.
 
-##2.1 Provisionando em Vagrant
+## 2.1 Provisionando em Vagrant
 
 Considerando que o virtualbox e o vagrant está instalado, crie o Vagrantfile no diretório ~/puppet-task com o seguinte conteúdo.
 
@@ -258,7 +258,7 @@ $ ssh node1
 $ ssh node2
 ```
 
-##2.2 Provisionando em Docker
+## 2.2 Provisionando em Docker
 
 Usando o docker também é possível provisionar os nodes Linux de forma rápida. Para isso edit o arquivo `docker-compose.yml` e tenha instalado o docker.
 
@@ -285,13 +285,13 @@ $ docker-compose up --scale ssh=3 --detach
 
 Não tem importância a forma de provisionar, basicamente os nodes Linux precisam ter SSH e WinRM nos servidores Windows. Portanto provisione da forma que você achar melhor.
 
-#3.  Manipulando os nodes
+# 3.  Manipulando os nodes
 
 Nos nodes provisionados é possível executar comandos, fazer upload de arquivos, rodar scripts e executar tasks e Plans.
 
 Tasks são tarefas (scripts) que serão executada nos nodes. A principal diferença entre as tasks e scripts é que as tasks recebem parâmetros e os parâmetros podem podem ser controlados.
 
-##3.1  Rodando comandos shell nos nodes Linux
+## 3.1  Rodando comandos shell nos nodes Linux
 
 Para executar comandos ad-hoc do bolt:
 
@@ -355,7 +355,7 @@ Nodes: [node1, node2, node3]
                  password: <senha>
 ```
 
-##3.2 Rodando comandos PowerShell no node Windows
+## 3.2 Rodando comandos PowerShell no node Windows
 
 O bolt executa os comandos no Windows através do WinRM, conforme já mencionado anteriormente.
 
@@ -437,7 +437,7 @@ Finished on node2:
 
 Ao executar o script pelo bolt, primeiramente é feito o download nos nodes antes de executar.
 
-##3.4 Rodando scripts no Windows
+## 3.4 Rodando scripts no Windows
 
 Todos os administradores de sistema já têm um conjunto de scripts para serem executados nos servidores. Esses scripts podem ser reutilizados e serem facilmente aplicados em um conjunto de servidores. Caso você tenha um desses scripts pode utiliza-ló. Nesse exemplo vamos utilizar um script simples para teste de conexão.
 
@@ -453,7 +453,7 @@ Executando o script:
 $ bolt script run /root/script/testconnection.ps1 --no-ssl -n $WIN
 ```
 
-##3.5 Upload de arquivo
+## 3.5 Upload de arquivo
 
 Um dos recursos normalmente utilizado na administração de servidores é o upload de arquivos. Normalmente durante um deploy é necessário enviar o pacote da aplicação para os servidores ou um conjunto de configuração conforme o ambiente.
 
@@ -473,7 +473,7 @@ Finished on node1:
 Successful on 1 node: node1
 Ran on 1 node in 1.14 seconds
 ```
-##3.6 Usando Package
+## 3.6 Usando Package
 
 Através do bolt é possível gerenciar pacotes e servidores. No exemplo a seguir é instalado o pacote "httpd" no node node1. As opções possíveis do parâmetro "action" são "install/status/unistall/upgrade".
 
@@ -489,7 +489,7 @@ $ bolt task run service action => status  name => httpd --nodes all
 
 Para o bolt utilizaros pacotes e módulos do Forge, é necessário instalar a ferramenta r10k.
 
-#4. Escrevendo Tasks
+# 4. Escrevendo Tasks
 
 Igualmente aos scripts, as tasks podem ser escritos em qualquer linguagem de programação, desde que seja possível executar no node.
 
@@ -505,7 +505,7 @@ As tasks também pode ter metadata que valida os argumentos de entrada e control
 
 Como exemplo de tasks, crie o arquivo init.sh no diretório '/modules/exercicio1/tasks':
 
-```
+```bash
 #!/bin/bash
 interface=$PT_interface
 ip=$(/sbin/ip add show $interface | grep "inet\b" | awk '{print $2}' | cut -d / -f 1 )
@@ -514,7 +514,7 @@ echo $ip
 
 Para executar a tasks padrão (init). Utilize o seguinte comando:
 
-```
+```bash
 $ bolt task run exercicio1 interface=eth0 --nodes all --modulepath /modules/
 Started on node1...
 Started on node2...
@@ -535,7 +535,7 @@ Tasks mais elaboradas desenvolvidas em outras linguagens como `Python` e `Ruby` 
 
 Usando o exemplo do módulo exercicio1, crie mais uma tasks com o nome `gethost.py` com o seguinte conteúdo.
 
-```
+```python
 #!/usr/bin/env python
 
 import socket
@@ -713,40 +713,45 @@ A seguir temos alguns exemplos de recebimento de parâmetros em bash, ruby, pyth
 
 Sempre estamos passado o caminho que estão localizados os módulos, entretanto podemos adicionar essa informação no arquivo ~/.puppetlabs/bolt/bolt.yaml.
 
-modulepath: "/modules/"
+`modulepath: "/modules/"`
 
-##4.2 Controlando parâmetros com metadata
+## 4.2 Controlando parâmetros com metadata
 
 Com os metadata é feito a documentação da tasks e também o controle dos parâmetros de entrada. O controle de parâmetros é importante para diminuir o risco de entrada de valores não desejáveis.
 
 A tabela a seguir, mostra os parâmetros e os valores padrões da configuração do arquivo de metadata.
 
-Chave	Descrição	Valor	Default
-description	Descrição da função da tasks	String	None
-puppet_task_version	A versão da tasks	Integer	1
-supports_noop	Quando a tasks suporta noop	Boolean	False
-input_method	As opções de passagem de parâmetros para a tasks	environment
-stdin
-powershell	stdin
-parameters	Tipo de dados do Puppet	Tipo Puppet	None
+|Chave	|Descrição	|Valor	|Default|
+|-------|-----------|-------|--------|
+|description|	Descrição da função da tasks	|String	|None|
+|puppet_task_version|	A versão da tasks|	Integer	|1|
+|supports_noop|	Quando a tasks suporta noop	|Boolean	|False|
+|input_method	|As opções de passagem de parâmetros para a tasks	|environment,
+stdin,powershell|	stdin|
+|parameters|	Tipo de dados do Puppet	|Tipo Puppet|	None|
+
 O metadata podem aceitar muitos tipos de dados no campo "parameters". A tabela seguinte mostra os mais comuns usadnos por tasks.
 
-Tipo	Descrição
-String	Aceita qualquer String.
-String[1]	Aceita qualquer String não vazia.
-Enun[opcao1, opcao2]	Aceita parâmetros de uma lista possível
-Pattern[/\A\W+\Z/]	Aceita String que validas pelas expressão regular [/\A\W+\Z/]
-Integer	Aceita valores Inteiros.
-Optional[String[1]]	Aceita a opção de uma lista e também permite valores nulos.
-Array[String]	Aceita um Array de String.
-Hash	Aceita um objeto Json.
-Variant[Integer, Pattern[/\A\W+\Z/]]	Aceita valores que aceita a expressão regular.
+|Tipo|	Descrição|
+|----|-----------|
+|String	|Aceita qualquer String.|
+|String[1] |	Aceita qualquer String não vazia.|
+|Enun[opcao1, opcao2]	|Aceita parâmetros de uma lista possível|
+|Pattern[/\A\W+\Z/]	|Aceita String que validas pelas expressão regular [/\A\W+\Z/]|
+|Integer	|Aceita valores Inteiros.|
+|Optional[String[1]]	|Aceita a opção de uma lista e também permite valores nulos.|
+|Array[String] |	Aceita um Array de String.|
+|Hash	Aceita um objeto Json. |
+|Variant[Integer, Pattern[/\A\W+\Z/]]	|Aceita valores que aceita a expressão regular.|
+
 O script "install.sh", exemplifica a utilização do metadata. O script basicamente faz a instalação do openjdk com a opção de desinstalar a versão antiga.Pelo metadata deve ser realizado os seguintes controles:
 
-A versão do openjdk deve ser homologada anteriormente;
-A opção de desinstalação seja binária (yes ou  no);
-O script é feito normalmente, sem nenhum controle de parâmetro; Crie o diretório /modules/exercicio3/tasks.
+- A versão do openjdk deve ser homologada anteriormente;
+- A opção de desinstalação seja binária (yes ou  no);
 
+O script é feito normalmente, sem nenhum controle de parâmetro; Crie o diretório `/modules/exercicio3/tasks`.
+
+```
 #!/usr/bin/bash
 #install.sh
 install="no"
@@ -771,6 +776,8 @@ if [ "$uninstall" == "yes" ]; then
      echo "Problema na Desinstalacao do $pacote"
   fi
 fi
+```
+
 O arquivo de JSON deve ter o mesmo nome do script, "install.json". A opção "description" descreve o funcionamento do script e no campo "parameters" é possível controlar as entradas.
 
 No exemplo, o parâmetro "version" obrigatoriamente deve ter um dos valores da lista (1_6_0, 1_7_0, 1_8), Igualmente o parâmetros "uninstall" deve ser "yes' ou "no".
@@ -779,6 +786,7 @@ Coloquei as versão do java (1_6_0, 1_7_0...), porque no arquivo de metadata na 
 
 Segue o arquivo do metadata install_openjdk.json.
 
+```json
 {
   "description" : "Instalação e Desinstalação do OpenJDK",
   "input_method": "environment",
@@ -793,8 +801,11 @@ Segue o arquivo do metadata install_openjdk.json.
          }
    }
 }
+```
+
 Rodando o script:
 
+```
 bolt task run exercicio3::install version=1_8_0 uninstall=no --nodes all
 Started on node2...
 Started on node1...
@@ -808,11 +819,15 @@ Finished on node1:
   }
 Successful on 2 nodes: node1,node2
 Ran on 2 nodes in 2.01 seconds
-4.3 Tasks com tratamento de erro
+```
+
+## 4.3 Tasks com tratamento de erro
+
 Quando uma task é finalizada com um código diferente de zero, o puppet-tasks verifica uma chave de erro ("_error"). Se essa chave não estiver presente, um erro genérico será adicionado ao campo de retorno. Se não houver texto na saída padrão (stdout), mas  se tiver presente no stderr, o texto stderr será incluído na mensagem.
 
 A estrutura da chave de erro:
 
+```json
 {
   "_error": {
          "msg"   : "Falha na task",
@@ -820,15 +835,18 @@ A estrutura da chave de erro:
          "details: " { "exitcode" :1 }
   }
 }
+```
+
 A estrutura da mensagem de erro é composta dos seguintes campos:
 
-msg: Mensagem amigável sobre o erro,
-kind: Mensagem mais detalhada e avançada. Mensagem pode ser compartilhada entre os módulos.
-details: Um objeto estruturado sobre a tasks.
+- *msg* : Mensagem amigável sobre o erro,
+- *kind* : Mensagem mais detalhada e avançada. Mensagem pode ser compartilhada entre os módulos.
+- *details* : Um objeto estruturado sobre a tasks.
+
 A seguir um exemplo da utilização de tratamento de erro:
 
+```python
 #!/usr/bin/env python
-
 import os
 import json
 
@@ -846,35 +864,46 @@ except:
                "details": {"exitcode": 1},
              }
     print(json.dumps(result))
-5. Escrevendo Plan
-O Plan é escrito utilizando a linguagem do Puppet, e nele pode ser vinculado a um conjunto de comandos, scripts, pacotes, tasks e a outros plan, facilitando  a reutilização  de código. Os plan executa a lógica localmente e os comandos/scripts/tasks são executados remotamente.
+```
+
+# 5. Escrevendo Plan
+
+O Plan é escrito utilizando a linguagem do Puppet, e nele pode ser vinculado a um conjunto de comandos, scripts pacotes, tasks e a outros plan, facilitando  a reutilização  de código. Os plan executa a lógica localmente e os comandos/scripts/tasks são executados remotamente.
 
 Apesar do plan ser escrito utilizando a linguagem do Puppet, não é necessário ter o puppet instalado no manager.
 
 O plan pode executar as seguintes funções:
 
-run_command: Roda um comando em um ou mais nodes;
-file_upload: Faz upload de arquivos para um ou mais nodes;
-run_script: Roda um script ( não é uma tasks);
-run_tasks: Roda uma task em um ou mais nodes;
-run_plan: Roda um plan em um ou mais nodes;
-Vamos para um exemplo simples para entender como funciona o plan. Para isso crie o seguinte arquivo /modules/exercicio4/plans/comandos.pp.
+- *run_command*: Roda um comando em um ou mais nodes;
+- *file_upload*: Faz upload de arquivos para um ou mais nodes;
+- *run_script*: Roda um script ( não é uma tasks);
+- *run_tasks*: Roda uma task em um ou mais nodes;
+- *run_plan*: Roda um plan em um ou mais nodes;
 
+Vamos para um exemplo simples para entender como funciona o plan. Para isso crie o seguinte arquivo `/modules/exercicio4/plans/comandos.pp`.
+
+```
 plan exercicio4::comandos (TargetSpec $nodes){
     run_command("uptime", $nodes)
 }
+```
+
 Nesse exemplo o plan basicamente executa um comando.
 
 Para rodar o plan:
 
+```
 $ bolt plan run exercicio4::comandos --nodes all
 Starting: command 'uptime' on node1, node2
 Finished: command 'uptime' with 0 failures in 0.78 sec
 Plan completed successfully with no result
+```
+
 Perceba que os nodes são passados pelo TargetSpec, além dos nodes outros parâmetros podem ser utilizado.
 
 Além de comandos é possível executar as tasks e incluir lógica/controle de verificação dentro dos plans, conforme mostra o exemplo a seguir:
 
+```
 plan my_app::deploy (
     String[1] $version,
     Enum[dev, staging,prod] $tier = 'dev',
@@ -896,17 +925,20 @@ plan my_app::deploy (
      notice("Deploy finalizado com falha")
    }
 }
+```
+
 Uma tasks executada dentro do Plan, retorna os seguintes objetos:
 
-Retorno	Descrição
-names	Retorna uma lista de nodes envolvidos;
-empty	Retorna true, se o retorno estiver vazio;
-count	Retorna um inteiro com o número de nodes envolvidos na tasks;
-first	Retorna um objeto com todas as informações da tasks:
-find	Pesquisa o retorno de um node especifico;
-error_set	Retorna o erro, caso exista;
-targets	Retorna uma lista com todos os retornos dos nodes
-ok	Retorna true se não tiver nenhum erro.
+|Retorno|	Descrição|
+|-------|-----------|
+|names	|Retorna uma lista de nodes envolvidos;|
+|empty	|Retorna true, se o retorno estiver vazio;|
+|count	|Retorna um inteiro com o número de nodes envolvidos na tasks;|
+|first	|Retorna um objeto com todas as informações da tasks|
+|find	|Pesquisa o retorno de um node especifico;|
+|error_set	|Retorna o erro, caso exista;|
+|targets	|Retorna uma lista com todos os retornos dos nodes|
+|ok	|Retorna true se não tiver nenhum erro.|
 
 # 6. Referência
 - [https://puppet.com/docs/bolt](https://puppet.com/docs/bolt)
