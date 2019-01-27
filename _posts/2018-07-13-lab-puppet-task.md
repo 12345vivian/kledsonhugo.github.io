@@ -99,8 +99,7 @@ Os principais recursos são:
 |bolt plan run	| Executa um Plan escrito em Puppet|
 
 Opções:
-| Descrição |
-|----|----|
+
 |-n, --nodes	|Identifica o node alvo|
 |--noop	|Executa uma tasks/comando/script em modo noop (simulação)|
 
