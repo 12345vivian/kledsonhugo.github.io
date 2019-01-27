@@ -5,7 +5,6 @@ subtitle: Estudo e laboratório sobre vagrant
 gh-repo: clodonil/clodonil.github.io
 gh-badge: [star, fork, follow]
 tags: [Puppet, Bolt, Vagrant, Tasks]
-image: /img/posts/2018-07-24-task-orquestrator/capa.png
 comments: true
 ---
 
