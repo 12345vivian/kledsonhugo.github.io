@@ -37,27 +37,24 @@ Todos os códigos estão no repostório do [https://github.com/clodonil/puppet-
 
 
 # 1. Introdução ao Puppet Task
-Puppet é uma ferramente de gestão de configurações. Ela mantem o estado desejado de um servidor. 
 
-O Puppet garante que o resultado/estado final é o desejado, mais não garante a ordem da execução das tarefas. 
+Puppet é uma ferramente de gestão de configurações. Ela mantem o estado desejado de um servidor. O Puppet garante que o resultado/estado final é o desejado, mais não garante a ordem da execução das tarefas. 
 
 Para controlar as ordens de execução é necessário utilizar recursos tais como `before/require` e `notify/subscribe` o que é praticamente enviável em ambientes complexos.
 
-Visando essa lacuna a Puppet lançou o recursos de Tasks, também conhecido com o Puppet Tasks.
+Visando essa lacuna a Puppet lançou o recursos de Tasks, também conhecido com o `Puppet Tasks`.
 
 Basicamente o Puppet Tasks é um conjunto de funções, tais como executar comandos remotamente, enviar arquivos, executar scripts, executar tarefas, gerenciar serviços  e instalar pacotes.
 
-Todas essas funções podem ser executadas ad-hoc, diretamente em um node.
+![tasks](../img/posts/2018-07-13-lab-puppet-task/img7.png)
 
-Além de executar ad-hoc os comandos, é possível criar um Plan que orquestra um conjunto de funções de forma ordenada, criando uma infinidades de possibilidades, e mais diretamente um forma poderosa de fazer deploy.
+Todas essas funções podem ser executadas ad-hoc, diretamente em um node. Além de executar ad-hoc os comandos, é possível criar um Plan que orquestra um conjunto de funções de forma ordenada, criando uma infinidades de possibilidades, e mais diretamente um forma poderosa de fazer deploy.
 
 A Puppet disponibilizou no Puppet Enterprise, apenas os recursos de tasks, services e package. E também lançou uma ferramenta opensource chamado puppet-bolt que possuem todos os outros recursos e utiliza o ssh/winrm para se comunicar com os nodes.
 
-Portanto para esse estudo estaremos utilizando o bolt.
+> Portanto para esse estudo estaremos utilizando o bolt.
 
-Para execução dos Plans e das Tasks não é necessário ter instalado o Puppet e nem o Puppet Enterprise, apenas o bolt.
-
-O computador com o bolt instalado recebe o nome de manager, nenhum outro recurso do Puppet é necessário para execução desse lab. 
+Para execução dos Plans e das Tasks não é necessário ter instalado o Puppet e nem o Puppet Enterprise, apenas o bolt. O computador com o bolt instalado recebe o nome de manager, nenhum outro recurso do Puppet é necessário para execução desse lab. 
 
 Todas as tasks e plans escritos para serem executados com o bolt, mantém 100% de compatibilidade com o Puppet Enterprise.
 
