@@ -664,7 +664,7 @@ Comando para executar a tasks Ruby:
 
 ```
 $ bolt task run exercicio2::tasks_env_ruby valor=10 --nodes all --modulepath /modules
-``
+```
 - **PowerShell**
 
    Tasks em PowerShell
