@@ -201,7 +201,8 @@ Os seguintes plugins do vagrant devem estar instalados:
 - winrm-elevated (1.1.0)
 - winrm-fs (1.2.0)
 
-Uma rápida explicação sobre o Vagrantfile, caso você não esteja familiarizado com essa tecnologia. A variável "$node_count" define a quantidade de nodes que serão criadas do centos 7 e a comunicação via SSH. Também está sendo provisionado uma máquina Windows (Nano Server) com a comunicação WinRM.
+Uma rápida explicação sobre o Vagrantfile, caso você não esteja familiarizado com essa tecnologia. 
+A variável `$node_count` define a quantidade de nodes que serão criadas do centos 7 e a comunicação via SSH. Também está sendo provisionado uma máquina Windows (Nano Server) com a comunicação WinRM.
 
 A vm "bolt" será utilizado como manager para gerenciar os outros nodes. Para isso é necessário que essa vm acesse todas as outras. Para tornar isso possível, copie a chave de acesso para a pasta do puppet-task:
 
