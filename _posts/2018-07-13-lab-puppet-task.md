@@ -591,7 +591,7 @@ As tasks recebem os parâmetros basicamente através de variável de ambiente (e
 
 A seguir temos alguns exemplos de recebimento de parâmetros em bash, ruby, python e PowerShell com passagem de parâmetros em stdin e environment. Para esses exemplos, crie o diretório exercicio2 no diretório modules.
 
-- **Bash
+- **Bash**
     
     * Tasks em bash com env:
     
