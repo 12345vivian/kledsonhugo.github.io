@@ -585,86 +585,93 @@ Ran on 2 nodes in 1.20 seconds
 
 Nesse exemplo um pré-requisito para execução do script é a presença do python no nodes.
 
-##4.1 Tasks com Parâmetros
+## 4.1 Tasks com Parâmetros
 
 As tasks recebem os parâmetros basicamente através de variável de ambiente (environment) ou através de entrada padrão (stdin). A escolha do método de passagem de parâmetros interfere diretamente na escrita do metadata e também no desenvolvido do próprio script.
 
 A seguir temos alguns exemplos de recebimento de parâmetros em bash, ruby, python e PowerShell com passagem de parâmetros em stdin e environment. Para esses exemplos, crie o diretório exercicio2 no diretório modules.
 
-Tasks em bash com env:
+- **Bash
+    
+    * Tasks em bash com env:
+    
+    ```
+    #!/bin/bash
+    #filename: tasks_env_bash.sh
+    
+    params=$PT_params
+    echo $params
+    ```
+    * Tasks em bash com stdin:
+    
+    ```
+    #!/bin/bash
+    #filename: tasks_stdin_bash.sh
+    
+    read params
+    echo $params
+    ```
+    Comando para execução da tasks:
+    
+    ```
+    $ bolt task run exercicio2::tasks_env_bash params=10 --nodes all --modulepath /modules/
+    ```
+- **Python**
 
-```
-#!/bin/bash
-#filename: tasks_env_bash.sh
+   * Tasks em python com env:
+   
+   ```
+   #!/usr/bin/env python
+   #filename: tasks_env_python.py
+   
+   import os
+   host = os.environ.get('PT_host')
+   print(host)
+   ```
+   
+   * Tasks em python com stdin:
+   
+   ```
+   #!/usr/bin/python
+   #filename: tasks_stdin_python.py
+   
+   host=input()
+   print(host)
+   ```
+   
+   Comando para execução da tasks:
+   
+   ```
+   $ bolt task run exercicio2::tasks_env_python host="server1" --nodes all --modulepath /modules
+   ```
 
-params=$PT_params
-echo $params
-```
-Tasks em bash com stdin:
+- **Ruby**
 
-```
-#!/bin/bash
-#filename: tasks_stdin_bash.sh
-
-read params
-echo $params
-```
-Comando para execução da tasks:
-
-```
-$ bolt task run exercicio2::tasks_env_bash params=10 --nodes all --modulepath /modules/
-```
-Tasks em python com env:
-
-```
-#!/usr/bin/env python
-#filename: tasks_env_python.py
-
-import os
-host = os.environ.get('PT_host')
-print(host)
-```
-
-Tasks em python com stdin:
-
-```
-#!/usr/bin/python
-#filename: tasks_stdin_python.py
-
-host=input()
-print(host)
-```
-
-Comando para execução da tasks:
-
-```
-$ bolt task run exercicio2::tasks_env_python host="server1" --nodes all --modulepath /modules
-```
-Tasks em ruby com env:
-
-```
-#!/usr/bin/ruby
-#filename: tasks_env_ruby.rb
-
-params = ENV["PT_valor"]
-puts("Parâmetro: #{params}")
-```
-
-Tasks em ruby com stdin:
-
-```
-#!/usr/bin/ruby
-#filename: tasks_stdin_ruby.rb
-
-params = STDIN.read
-puts("Parâmetros: #{params}")
-```
-
-Comando para executar a tasks Ruby:
-
-```
-$ bolt task run exercicio2::tasks_env_ruby valor=10 --nodes all --modulepath /modules
-```
+   * Tasks em ruby com env:
+   
+   ```
+   #!/usr/bin/ruby
+   #filename: tasks_env_ruby.rb
+   
+   params = ENV["PT_valor"]
+   puts("Parâmetro: #{params}")
+   ```
+   
+   * Tasks em ruby com stdin:
+   
+   ```
+   #!/usr/bin/ruby
+   #filename: tasks_stdin_ruby.rb
+   
+   params = STDIN.read
+   puts("Parâmetros: #{params}")
+   ```
+   
+   Comando para executar a tasks Ruby:
+   
+   ```
+   $ bolt task run exercicio2::tasks_env_ruby valor=10 --nodes all --modulepath /modules
+   ```
 - **PowerShell**
 
    Tasks em PowerShell
