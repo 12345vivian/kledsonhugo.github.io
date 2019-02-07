@@ -10,7 +10,7 @@ Meu nome é Clodonil Trigo, e além de tecnologia, tenho os seguintes gostos:
 
 
 ![familia](../img/about/familia.jpg){:height="50%" width="50%"}
-![caique](../img/about/caiaque.jpg)
+![caique](../img/about/caiaque.jpg){:style="float: right;margin-right: 7px;margin-top: 7px; :height="50%" width="50%""}
 
 To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
 
