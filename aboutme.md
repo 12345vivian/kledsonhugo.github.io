@@ -4,12 +4,7 @@ title: About me
 subtitle: Why you'd want to go on a date with me
 ---
 
-My name is Inigo Montoya. I have the following qualities:
-
-- I rock a great mustache
-- I'm extremely loyal to my family
-
-What else do you need?
+Meu nome é Clodonil Trigo, e além de tecnologia, tenho os seguintes gostos:
 
 ### my history
 
@@ -28,7 +23,7 @@ Cursos que tenho interesse em realizar.
     
 Livros que tenho interesse em lêr.
 
-| Titulo | Autor | Pag | Status | Avaliação |
+| Titulo | Autor | Pág | Status | Avaliação |
 |--------|-------|-----|--------|-----------|
 |A Volta do Parafuso | Henry James | 184 |   <i class="fa fa-star fa-check">   |  <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
 |O Cão dos BaskerVille | Arthur Conan Doyle |224| <i class="fa fa-star fa-check"> |  <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
