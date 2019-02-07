@@ -19,12 +19,16 @@ To be honest, I'm having some trouble remembering right now, so why don't you ju
 
 ## **Livro**
     
+<i class="fas fa-books"></i>
+    
+Livros que tenho interesse em lêr nesse ano.
+
 | Titulo | Autor | Pag | Status | Avaliação |
 |--------|-------|-----|--------|-----------|
-|A Volta do Parafuso | Henry James | 184 |   <i class="fa fa-star fa-check">   |  :star:  :star: |
+|A Volta do Parafuso | Henry James | 184 |   <i class="fa fa-star fa-check">   |  <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
 |O Cão dos BaskerVille | Arthur Conan Doyle |224| <i class="fa fa-star fa-check"> |  <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
-|A Máquina do Tempo | H.G Wells | 152 | <i class="fa fa-star fa-check"> | :star: :star: :star:   |
-| Elon Musk         | Ashlee Vance | 433 | <i class="fa fa-star fa-check"> | :star: :star: :star: :star: :star:   |
+|A Máquina do Tempo | H.G Wells | 152 | <i class="fa fa-star fa-check"> | <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>   |
+| Elon Musk         | Ashlee Vance | 433 | <i class="fa fa-star fa-check"> | <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>   |
 
 
 
