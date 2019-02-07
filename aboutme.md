@@ -18,6 +18,7 @@ To be honest, I'm having some trouble remembering right now, so why don't you ju
 # 2019
 
   ## **Livro**
+    
     | Titulo | Autor | Pag | Status | Avaliação |
     |--------|-------|-----|--------|-----------|
     |A Volta do Parafuso | Henry James | 184 | :heavy_check_mark: |  :star:  :star: |
