@@ -6,7 +6,7 @@ subtitle: Why you'd want to go on a date with me
 
 Meu nome é Clodonil Trigo, e além de tecnologia, tenho os seguintes gostos:
 
-### my history
+### Minha História
 
 
 ![familia](../img/about/familia.jpg){{:style="float: left;margin-left: 7px;margin-top: 7px;:height="50%" width="50%"}
