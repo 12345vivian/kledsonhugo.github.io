@@ -9,7 +9,7 @@ Meu nome é Clodonil Trigo, e além de tecnologia, tenho os seguintes gostos:
 ### my history
 
 
-![familia](../img/about/familia.jpg){:height="50%" width="50%"}
+![familia](../img/about/familia.jpg){{:style="float: left;margin-left: 7px;margin-top: 7px;:height="50%" width="50%"}
 ![caique](../img/about/caiaque.jpg){:style="float: right;margin-right: 7px;margin-top: 7px; :height="50%" width="50%""}
 
 To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
@@ -36,6 +36,6 @@ Livros que tenho interesse em lêr.
 |O fantasma de Canterville | Oscar Wilde | 70 | <i class="fa fa-star fa-check"> | <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>   |
 |Viagem ao centro da Terra | Júlio Verne |   | | |
 |O Ladrão de casaca | Maurice Leblanc | |  | |
-|A ilha do tesouri | Robert Louis Stevenson |264 |  | |
+|A ilha do tesouri | Robert Stevenson |264 |  | |
 
 
