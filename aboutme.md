@@ -19,12 +19,12 @@ To be honest, I'm having some trouble remembering right now, so why don't you ju
 
   ## **Livro**
     
-    | Titulo | Autor | Pag | Status | Avaliação |
-    |--------|-------|-----|--------|-----------|
-    |A Volta do Parafuso | Henry James | 184 | :heavy_check_mark: |  :star:  :star: |
-    |O Cão dos BaskerVille | Arthur Conan Doyle |224| :heavy_check_mark: |  :star:  :star:  :star:  :star: |
-    |A Máquina do Tempo | H.G Wells | 152 | :heavy_check_mark: | :star: :star: :star:   |
-    | Elon Musk         | Ashlee Vance | 433 | :heavy_check_mark: | :star: :star: :star: :star: :star:   |
+| Titulo | Autor | Pag | Status | Avaliação |
+|--------|-------|-----|--------|-----------|
+|A Volta do Parafuso | Henry James | 184 | :heavy_check_mark: |  :star:  :star: |
+|O Cão dos BaskerVille | Arthur Conan Doyle |224| :heavy_check_mark: |  :star:  :star:  :star:  :star: |
+|A Máquina do Tempo | H.G Wells | 152 | :heavy_check_mark: | :star: :star: :star:   |
+| Elon Musk         | Ashlee Vance | 433 | :heavy_check_mark: | :star: :star: :star: :star: :star:   |
 
 
 
