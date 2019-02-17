@@ -1,10 +1,16 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Um pouco de mim
 ---
+Meu nome é [`Clodonil Trigo`](clodonil@nisled.org), além dos assuntos de DevOps, tenho interesse em vários outros assuntos, muitos deles se confudem com os meus `hobby`:
 
-Meu nome é Clodonil Trigo, e além de tecnologia, tenho os seguintes gostos:
+- Python
+- Arduino
+- Ruby
+- Horta Urbana
+- Drone
+- ... 
 
 ### Minha História
 
