@@ -3,7 +3,7 @@ layout: page
 title: About me
 subtitle: Um pouco de mim
 ---
-Meu nome é [`Clodonil Trigo`](clodonil@nisled.org), além dos assuntos de DevOps, tenho interesse em vários outros assuntos, muitos deles se confudem com os meus `hobby`:
+Meu nome é [`Clodonil Trigo`](mailto:clodonil@nisled.org), além dos assuntos de DevOps, tenho interesse em vários outros assuntos, muitos deles se confudem com os meus `hobby`:
 
 - Python
 - Arduino
