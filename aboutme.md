@@ -61,5 +61,6 @@ Livros que tenho interesse em lêr.
 |Viagem ao centro da Terra | Júlio Verne |   | | |
 |O Ladrão de casaca | Maurice Leblanc | |  | |
 |A ilha do tesouro | Robert Stevenson |264 | <i class="fa fa-star fa-check"> |<i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
+|Histórias extraordinárias|Edgar Allan Poe |264 |  | |
 
 
