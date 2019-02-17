@@ -4,9 +4,10 @@ title: About me
 subtitle: Um pouco de mim
 ---
 
+![familia](../img/about/familia.jpg){:style="float: right;margin-right: 7px;margin-top: 7px;:height="50%" width="50%""}
+
 Meu nome é [`Clodonil Trigo`](clodonil@nisled.org), primeiramente tenho uma familia linda, é a fonte da minha alegria e vida. O tempo que passamos juntos são fantásticos e nunca são suficientes. Tudo que faço deve ter eles como centro e foco.
 
-![familia](../img/about/familia.jpg){:style="float: right;margin-right: 7px;margin-top: 7px;:height="50%" width="50%""}
 
 
 Possuo graduação em `Matemática como foco em Computação` pelo Centro Universitário Adventista de São Paulo(2001), `especialização em Administração de Redes Linux` pela Universidade Federal de Lavras(2005), `especialização em Didática do Ensino Superior` pelo Centro Universitário Adventista de São Paulo(2004) e mestrado em `Ciência da Computação` pela Universidade Metodista de Piracicaba(2008). 
