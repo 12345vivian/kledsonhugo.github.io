@@ -56,16 +56,16 @@ Cursos que realizei no ano de 2018 e 2019.
     
 Livros que tenho interesse em lêr ou que estou lendo no ano de 2019.
 
-|Ano| Titulo | Autor | Pág | Status | Avaliação |
-|---|--------|-------|-----|--------|-----------|
-|2019|A Volta do Parafuso | Henry James | 184 |   <i class="fa fa-star fa-check">   |  <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
-|2019|O Cão dos BaskerVille | Arthur Conan Doyle |224| <i class="fa fa-star fa-check"> |  <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
-|2019|A Máquina do Tempo | H.G Wells | 152 | <i class="fa fa-star fa-check"> | <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>   |
-|2019|Elon Musk         | Ashlee Vance | 433 | <i class="fa fa-star fa-check"> | <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>   |
-|2019|O fantasma de Canterville | Oscar Wilde | 70 | <i class="fa fa-star fa-check"> | <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>   |
-||Viagem ao centro da Terra | Júlio Verne |   | | |
-||O Ladrão de casaca | Maurice Leblanc | |  | |
-|2019|A ilha do tesouro | Robert Stevenson |264 | <i class="fa fa-star fa-check"> |<i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
-|2019|Histórias extraordinárias|Edgar Allan Poe |264 |  | |
+| Titulo | Autor | Pág | Status | Avaliação |
+|--------|-------|-----|--------|-----------|
+|A Volta do Parafuso | Henry James | 184 |   <i class="fa fa-star fa-check">   |  <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
+|O Cão dos BaskerVille | Arthur Conan Doyle |224| <i class="fa fa-star fa-check"> |  <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
+|A Máquina do Tempo | H.G Wells | 152 | <i class="fa fa-star fa-check"> | <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>   |
+|Elon Musk         | Ashlee Vance | 433 | <i class="fa fa-star fa-check"> | <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>   |
+|O fantasma de Canterville | Oscar Wilde | 70 | <i class="fa fa-star fa-check"> | <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>   |
+|Viagem ao centro da Terra | Júlio Verne |   | | |
+|O Ladrão de casaca | Maurice Leblanc | |  | |
+|A ilha do tesouro | Robert Stevenson |264 | <i class="fa fa-star fa-check"> |<i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
+|Histórias extraordinárias|Edgar Allan Poe |264 |  | |
 
 
