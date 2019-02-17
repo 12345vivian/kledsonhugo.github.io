@@ -31,7 +31,7 @@ Além dos assuntos de DevOps, tenho interesse em vários outros assuntos, muitos
 
 Fora dos assuntos de tecnologia gosto de pesca esportiva com caique. Não tenho total certeza se isso é de fato um esporte mais é bastante interessante. O peixe que sempre buscamos, mais nunca conseguimos é o [Robalo](https://pt.wikipedia.org/wiki/Robalo).
 
-Depois que comprei um drone, esse também tenho passado um bom tempo pilotando e tirando algunas fotos. Além disso curto bastante horta urbana e sistemas sustentável como energia solar, capitação de agua de chuva, tijolo econologico e quase tudo relacionado a isso. 
+Depois que comprei um drone, também tenho passado um bom tempo pilotando e tirando algunas fotos. Além disso curto bastante horta urbana e sistemas sustentável como energia solar, capitação de agua de chuva, tijolo econologico e quase tudo relacionado a isso. 
 
 
 Abaixo alguns cursos que realizei no ano de 2018 e 2019.
