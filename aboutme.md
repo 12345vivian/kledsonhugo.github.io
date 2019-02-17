@@ -29,8 +29,12 @@ Além dos assuntos de DevOps, tenho interesse em vários outros assuntos, muitos
 
 ![caique](../img/about/caiaque.jpg){:style="float: right;margin-right: 7px;margin-top: 7px; :height="50%" width="50%""}
 
-Fora dos assuntos de tecnologia gosto de pescar com caique, cuidar da minha horta urbana e também brincar com drone.
+Fora dos assuntos de tecnologia gosto de pesca esportiva com caique. Não tenho total certeza se isso é de fato um esporte mais é bastante interessante. O peixe que sempre buscamos, mais nunca conseguimos é o [Robalo](https://pt.wikipedia.org/wiki/Robalo).
 
+Depois que comprei um drone, esse também tenho passado um bom tempo pilotando e tirando algunas fotos. Além disso curto bastante horta urbana e sistemas sustentável como energia solar, capitação de agua de chuva, tijolo econologico e quase tudo relacionado a isso. 
+
+
+Abaixo alguns cursos que realizei no ano de 2018 e 2019.
 
 ## **Cursos**
 
@@ -50,7 +54,7 @@ Cursos que tenho interesse em realizar.
 
 ## **Livro**
     
-Livros que tenho interesse em lêr.
+Livros que tenho interesse em lêr ou que estou lendo no ano de 2019.
 
 | Titulo | Autor | Pág | Status | Avaliação |
 |--------|-------|-----|--------|-----------|
