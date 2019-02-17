@@ -60,6 +60,6 @@ Livros que tenho interesse em lêr.
 |O fantasma de Canterville | Oscar Wilde | 70 | <i class="fa fa-star fa-check"> | <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>   |
 |Viagem ao centro da Terra | Júlio Verne |   | | |
 |O Ladrão de casaca | Maurice Leblanc | |  | |
-|A ilha do tesouri | Robert Stevenson |264 |  | |
+|A ilha do tesouro | Robert Stevenson |264 | <i class="fa fa-star fa-check"> |<i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
 
 
