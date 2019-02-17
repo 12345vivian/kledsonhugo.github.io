@@ -36,11 +36,9 @@ Depois que comprei um drone, também tenho passado um bom tempo pilotando e tira
 Além disso curto bastante horta urbana e sistemas sustentável como energia solar, capitação de agua de chuva, tijolo econologico e quase tudo relacionado a isso. 
 
 
-Abaixo alguns cursos que realizei no ano de 2018 e 2019.
-
 ## **Cursos**
 
-Cursos que tenho interesse em realizar.
+Cursos que realizei no ano de 2018 e 2019.
 
 |Titulo             |  Escola |Ano|Status | Avaliação | 
 |-------------------|--------|---|-------|-----------|
@@ -49,7 +47,7 @@ Cursos que tenho interesse em realizar.
 | Aws Certified Sysops Administrator Aasociate     |  Udemy       | 2018   |  <i class="fa fa-star fa-check">       | <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>          |
 | Redis I  | Alura |  2018 |  <i class="fa fa-star fa-check"> |  <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i>
 | Redis II  | Alura |  2018 |  70% |  
-| Rubernetes | Alura | 2019 |  40 %| | 
+| Kubernetes | Alura | 2019 |  40 %| | 
 | React Parte1 | Alura | 40% ||
 | Learn Continuous Integration with Jenkins | | |
 
@@ -58,16 +56,16 @@ Cursos que tenho interesse em realizar.
     
 Livros que tenho interesse em lêr ou que estou lendo no ano de 2019.
 
-| Titulo | Autor | Pág | Status | Avaliação |
-|--------|-------|-----|--------|-----------|
-|A Volta do Parafuso | Henry James | 184 |   <i class="fa fa-star fa-check">   |  <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
-|O Cão dos BaskerVille | Arthur Conan Doyle |224| <i class="fa fa-star fa-check"> |  <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
-|A Máquina do Tempo | H.G Wells | 152 | <i class="fa fa-star fa-check"> | <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>   |
-|Elon Musk         | Ashlee Vance | 433 | <i class="fa fa-star fa-check"> | <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>   |
-|O fantasma de Canterville | Oscar Wilde | 70 | <i class="fa fa-star fa-check"> | <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>   |
-|Viagem ao centro da Terra | Júlio Verne |   | | |
-|O Ladrão de casaca | Maurice Leblanc | |  | |
-|A ilha do tesouro | Robert Stevenson |264 | <i class="fa fa-star fa-check"> |<i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
-|Histórias extraordinárias|Edgar Allan Poe |264 |  | |
+|Ano| Titulo | Autor | Pág | Status | Avaliação |
+|---|--------|-------|-----|--------|-----------|
+|2019|A Volta do Parafuso | Henry James | 184 |   <i class="fa fa-star fa-check">   |  <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
+|2019|O Cão dos BaskerVille | Arthur Conan Doyle |224| <i class="fa fa-star fa-check"> |  <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
+|2019|A Máquina do Tempo | H.G Wells | 152 | <i class="fa fa-star fa-check"> | <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>   |
+|2019|Elon Musk         | Ashlee Vance | 433 | <i class="fa fa-star fa-check"> | <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>   |
+|2019|O fantasma de Canterville | Oscar Wilde | 70 | <i class="fa fa-star fa-check"> | <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>   |
+||Viagem ao centro da Terra | Júlio Verne |   | | |
+||O Ladrão de casaca | Maurice Leblanc | |  | |
+|2019|A ilha do tesouro | Robert Stevenson |264 | <i class="fa fa-star fa-check"> |<i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
+|2019|Histórias extraordinárias|Edgar Allan Poe |264 |  | |
 
 
