@@ -37,8 +37,8 @@ Cursos que tenho interesse em realizar.
 
 |Titulo             |  Escola |Ano|Status | Avaliação | 
 |-------------------|--------|---|-------|-----------|
-|Docker for Professionals| StackSkills | 2018 | <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i>|
-|Vagrant Essentials |Vagrant Essentials |  2018 |  <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i>|
+|Docker for Professionals| StackSkills | 2018 | <i class="fa fa-star fa-check">|<i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i>|
+|Vagrant Essentials |Vagrant Essentials |  2018 | <i class="fa fa-star fa-check">| <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i>|
 | Aws Certified Sysops Administrator Aasociate     |  Udemy       | 2018   |  <i class="fa fa-star fa-check">       | <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>          |
 | Redis I  | Alura |  2018 |  <i class="fa fa-star fa-check"> |  <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i>
 | Redis II  | Alura |  2018 |  70% |  
