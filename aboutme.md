@@ -3,7 +3,18 @@ layout: page
 title: About me
 subtitle: Um pouco de mim
 ---
-Meu nome é [`Clodonil Trigo`](mailto:clodonil@nisled.org), além dos assuntos de DevOps, tenho interesse em vários outros assuntos, muitos deles se confudem com os meus `hobby`:
+
+Meu nome é [`Clodonil Trigo`](clodonil@nisled.org), primeiramente tenho uma familia linda, é a fonte da minha alegria e vida. O tempo que passamos juntos são fantásticos e nunca são suficientes. Tudo que faço deve ter eles como centro e foco.
+
+![familia](../img/about/familia.jpg){:style="float: right;margin-right: 7px;margin-top: 7px;:height="50%" width="50%""}
+
+
+Possuo graduação em `Matemática como foco em Computação` pelo Centro Universitário Adventista de São Paulo(2001), `especialização em Administração de Redes Linux` pela Universidade Federal de Lavras(2005), `especialização em Didática do Ensino Superior` pelo Centro Universitário Adventista de São Paulo(2004) e mestrado em `Ciência da Computação` pela Universidade Metodista de Piracicaba(2008). 
+
+Atuo como [`Engnheiro de DevOps no Banco Itaú`](https://www.linkedin.com/in/clodonil-trigo-4155722a/) e como [`Professor titular de Ciência da Computação`](https://www.linkedin.com/in/clodonil-trigo-4155722a/) do Centro Universitário Adventista.
+
+
+Além dos assuntos de DevOps, tenho interesse em vários outros assuntos, muitos deles se confudem com os meus `hobby`:
 
 - Python
 - Arduino
@@ -12,28 +23,12 @@ Meu nome é [`Clodonil Trigo`](mailto:clodonil@nisled.org), além dos assuntos d
 - Drone
 - ... 
 
-### Minha História
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
-
-
-
-![familia](../img/about/familia.jpg){:style="float: right;margin-right: 7px;margin-top: 7px;:height="50%" width="50%""}
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+Fora dos assuntos de tecnologias 
 
 To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
 
 
 ![caique](../img/about/caiaque.jpg){:style="float: right;margin-right: 7px;margin-top: 7px; :height="50%" width="50%""}
-
-
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
-
-
 
 
 
