@@ -52,7 +52,7 @@ Cursos que tenho interesse em realizar.
 | Learn Continuous Integration with Jenkins | | |
 
 
-## **Livro**
+## **Livros**
     
 Livros que tenho interesse em lêr ou que estou lendo no ano de 2019.
 
