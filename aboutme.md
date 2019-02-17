@@ -33,7 +33,7 @@ Fora dos assuntos de tecnologia gosto de pesca esportiva com caique. Não tenho 
 
 Depois que comprei um drone, também tenho passado um bom tempo pilotando e tirando algunas fotos. 
 
-Além disso curto bastante horta urbana e sistemas sustentável como energia solar, capitação de agua de chuva, tijolo econologico e quase tudo relacionado a isso. 
+Além disso curto bastante horta urbana e sistema sustentável como energia solar, capitação de agua de chuva, tijolo ecológico e quase tudo relacionado a isso. 
 
 
 ## **Cursos**
