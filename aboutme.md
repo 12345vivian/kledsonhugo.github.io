@@ -29,11 +29,7 @@ Além dos assuntos de DevOps, tenho interesse em vários outros assuntos, muitos
 
 ![caique](../img/about/caiaque.jpg){:style="float: right;margin-right: 7px;margin-top: 7px; :height="50%" width="50%""}
 
-Fora dos assuntos de tecnologias 
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
-
-
+Fora dos assuntos de tecnologia gosto de pescar com caique, cuidar da minha horta urbana e também brincar com drone.
 
 
 ## **Cursos**
