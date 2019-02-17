@@ -14,7 +14,7 @@ Meu nome é [`Clodonil Trigo`](clodonil@nisled.org), primeiramente tenho uma fam
 
 Possuo graduação em Matemática como foco em Computação pelo Centro Universitário Adventista de São Paulo(2001), especialização em Administração de Redes Linux pela Universidade Federal de Lavras(2005), especialização em Didática do Ensino Superior pelo Centro Universitário Adventista de São Paulo(2004) e mestrado em Ciência da Computação` pela Universidade Metodista de Piracicaba(2008). 
 
-Atuo como [`Engnheiro de DevOps no Banco Itaú`](https://www.linkedin.com/in/clodonil-trigo-4155722a/) e como [`Professor titular de Ciência da Computação`](https://www.linkedin.com/in/clodonil-trigo-4155722a/) do Centro Universitário Adventista.
+Atuo como [Engnheiro de DevOps no Banco Itaú](https://www.linkedin.com/in/clodonil-trigo-4155722a/) e como [Professor titular de Ciência da Computação](https://www.linkedin.com/in/clodonil-trigo-4155722a/) do Centro Universitário Adventista.
 
 
 Além dos assuntos de DevOps, tenho interesse em vários outros assuntos, muitos deles se confudem com os meus `hobby`:
