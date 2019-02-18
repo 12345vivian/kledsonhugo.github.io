@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jornada do Code em Dev ao Deploy em AWS
+title: Jornada do Code ao Deploy em AWS
 subtitle: Desenvolvimento em Python e deploy na AWS
 gh-repo: clodonil/clodonil.github.io
 gh-badge: [star, fork, follow]
