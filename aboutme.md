@@ -5,8 +5,9 @@ subtitle: Um pouco de mim
 ---
 
 
-Meu nome é [`Clodonil Trigo`](clodonil@nisled.org), primeiramente tenho uma familia linda, é a fonte da minha alegria e vida. O tempo que passamos juntos são fantásticos e nunca são suficientes. Tudo que faço deve ter eles como centro e foco.
+Meu nome é [`Clodonil Trigo`](clodonil@nisled.org), tenho esse blog para documentar alguns estudos que tenho realizado. Se algumas dessas informações forem úteis para você, fique a vontade.
 
+Para falar um pouco de mim, primeiramente tenho que falar da minha familia, que é linda, é a fonte da minha alegria e vida. O tempo que passamos juntos são fantásticos e nunca são suficientes. Tudo que faço deve ter eles como centro e foco.
 
 ![familia](../img/about/familia.jpg){:style="float: right;margin-right: 7px;margin-top: 7px;:height="50%" width="50%""}
 
