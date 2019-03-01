@@ -19,7 +19,6 @@ Basicamente o script faz a compactação dos arquivos de banco de dados e do sis
 O script controla/rotaciona a quantidade de arquivos de backup.
 
 [![Screen Shot](http://www.devops-sys.com.br/screenshot/bkmagento1.jpg)](http://www.devops-sys.com.br/screenshot/bkmagento1.jpg)
-
 ## Instalação
 A instalação do script é bastante simples. É preciso ter instalado no servidor o python3.4 e o pip3.
  
