@@ -11,12 +11,9 @@ Para falar um pouco de mim, primeiramente tenho que falar da minha familia, que 
 
 ![familia](../img/about/familia.jpg){:style="float: right;margin-right: 7px;margin-top: 7px;:height="50%" width="50%""}
 
-
-
-Possuo graduação em Matemática com foco em Computação pelo Centro Universitário Adventista de São Paulo(2001), especialização em Administração de Redes Linux pela Universidade Federal de Lavras(2005), especialização em Didática do Ensino Superior pelo Centro Universitário Adventista de São Paulo(2004) e mestrado em Ciência da Computação pela Universidade Metodista de Piracicaba(2008). 
+Possuo graduação em Matemática com foco em Computação pelo Centro Universitário Adventista de São Paulo(2001), especialização em Administração de Redes Linux pela Universidade Federal de Lavras(2005), especialização em Didática do Ensino Superior pelo Centro Universitário Adventista de São Paulo(2004) e mestrado em Ciência da Computação pela Universidade Metodista de Piracicaba(2008).
 
 Atuo como [Engnheiro de DevOps no Banco Itaú](https://www.linkedin.com/in/clodonil-trigo-4155722a/) e como [Professor titular de Ciência da Computação](https://www.linkedin.com/in/clodonil-trigo-4155722a/) do Centro Universitário Adventista.
-
 
 Além dos assuntos de DevOps, tenho interesse em vários outros assuntos, muitos deles se confudem com os meus `hobbies`:
 
@@ -25,17 +22,15 @@ Além dos assuntos de DevOps, tenho interesse em vários outros assuntos, muitos
 - Ruby
 - Horta Urbana
 - Drone
-- ... 
-
+- ...
 
 ![caique](../img/about/caiaque.jpg){:style="float: right;margin-right: 7px;margin-top: 7px; :height="50%" width="50%""}
 
 Fora dos assuntos de tecnologia gosto de pesca esportiva com caique. Não tenho total certeza se isso é de fato um esporte mais é bastante interessante. O peixe que sempre buscamos, mais nunca conseguimos é o [Robalo](https://pt.wikipedia.org/wiki/Robalo).
 
-Depois que comprei um drone, também tenho passado um bom tempo pilotando e tirando algunas fotos. 
+Depois que comprei um drone, também tenho passado um bom tempo pilotando e tirando algunas fotos.
 
-Além disso curto bastante horta urbana e sistema sustentável como energia solar, capitação de agua de chuva, tijolo ecológico e quase tudo relacionado a isso. 
-
+Além disso curto bastante horta urbana e sistema sustentável como energia solar, capitação de agua de chuva, tijolo ecológico e quase tudo relacionado a isso.
 
 ## **Cursos**
 
@@ -68,5 +63,3 @@ Livros que tenho interesse em lêr ou que estou lendo no ano de 2019.
 |O Ladrão de casaca | Maurice Leblanc | |  | |
 |A ilha do tesouro | Robert Stevenson |264 | <i class="fa fa-star fa-check"> |<i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
 |Histórias extraordinárias|Edgar Allan Poe |132 | <i class="fa fa-star fa-check"> |<i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
-
-

@@ -14,7 +14,7 @@ Se você tem um e-commerce ou um aplicação pequeno e gostaria de implementar u
 
 Esse script foi escrito para resolver um problema pessoal de backup automatizado no google Drive. Fique a vontade para reportar problemas ou melhorá-lo.
 
-Basicamente o script faz a compactação dos arquivos de banco de dados e do sistema e envia para o gdrive. Também existe a possibilidade de manter o backup local. 
+Basicamente o script faz a compactação dos arquivos de banco de dados e do sistema e envia para o gdrive. Também existe a possibilidade de manter o backup local.
 
 O script controla/rotaciona a quantidade de arquivos de backup.
 
