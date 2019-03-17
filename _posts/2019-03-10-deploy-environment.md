@@ -24,9 +24,9 @@ No modelo de configuração, precisamos armazenar os dados em um sistema central
  
 Esse sistema que armazena os dados também devem permitir o armazenamento de segredos (secret) e tudo controlado com controle de acesso, log e auditoria.
 
-![dados](https://github.com/clodonil/docker-secret-aws/blob/master/img/img2.png)
+![dados](../img/posts/2019-03-10-deploy-environment/img2.png)
 
-Na AWS temos 2 serviços que atendem esses critérios e são exclusivamente para armazenamento de dados de configurações. 
+Na AWS temos 2 serviços que atendem esses critérios e são exclusivamente para armazenamento de dados de configurações.
 
 São eles:
 
@@ -105,7 +105,7 @@ $ docker run -d -p 8080:8080 -e ENVIRONMENT='Development' -e MSG="Ola Mundo!!!" 
 ```
 Para validar acesse o navegador para validar:
 
-![app-local](https://github.com/clodonil/docker-secret-aws/blob/master/img/img3.png)
+![app-local](../img/posts/2019-03-10-deploy-environment/img3.png)
 
 Se tudo funcionou perfeitamente até aqui, podemos passar a AWS e colocar a nossa aplicação na AWS.
 
@@ -115,7 +115,7 @@ Vamos começar na AWS preenchendo os dados no Parameter Store.
 
 Pode ser preenchido via painel da AWS..
 
-![ssm](https://github.com/clodonil/docker-secret-aws/blob/master/img/img7.png)
+![ssm](../img/posts/2019-03-10-deploy-environment/img7.png)
 
 Também pode ser preenchido pelo `aws-cli`.
 
@@ -127,7 +127,7 @@ $ aws ssm put-parameter --name /app/homolog/MSG --value "Olá Mundo em Homolog" 
 
 Para o desenvolvimento da Pipeline na AWS, vamos primeiramente criar da infraestrutura.
 
-![infra](https://github.com/clodonil/docker-secret-aws/blob/master/img/img5.png)
+![infra](../img/posts/2019-03-10-deploy-environment/img5.png)
 
 A infraestrutura consiste basicamente em criar 2 repositório do ECR para armazenamento das imagens docker.
 
@@ -137,4 +137,4 @@ Além do repositório também é necessário a criação de um Cluster Fargate. 
 
 A última parte desse documento é demostrar a pipeline que foi desenvolvida para a validação das gestão de configuração.
 
-![pipeline-source](https://github.com/clodonil/docker-secret-aws/blob/master/img/img9.png)
+![pipeline-source](../img/posts/2019-03-10-deploy-environment/img9.png)
