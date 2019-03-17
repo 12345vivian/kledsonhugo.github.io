@@ -1,6 +1,6 @@
 --
 layout: post
-title: Gestão de Secrets/Enviroment na AWS
+title: Gestão de Secrets para container na AWS
 subtitle: Configuração de environment para Deploy
 gh-repo: clodonil/clodonil.github.io
 gh-badge: [star, fork, follow]
