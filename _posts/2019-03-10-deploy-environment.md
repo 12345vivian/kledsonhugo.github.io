@@ -12,7 +12,7 @@ No desenvolvimento de uma aplicação moderna a única coisa que deve mudar entr
 
 A gestão de configurações e um capítulo dos [12facter](https://12factor.net/pt_br/config)
 
-![12factor](../posts/2019-03-10-deploy-environment/img1.png)
+![12factor](../img/posts/2019-03-10-deploy-environment/img1.png)
 
 Os programas que armazenam acesso a banco de dados ou outros configurações diretamente no seu código, está violando os 12fatores.
 
