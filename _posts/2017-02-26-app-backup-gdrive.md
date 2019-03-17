@@ -87,7 +87,7 @@ As principais linhas de configuração são:
   * **listaFile**: *Lista de arquivos que estão no backup*
   * **name**: *Nome da aplicação/sistema*
   * **path**: *Diretório do armazenamento do magento*
-  * **path_exclude**: *Diretório ou arquivos que não serão incluidos no backup*
+  * **path_exclude**: *Diretório ou arquivos que não serão incluídos no backup*
   * **db_rotation**: *Quantidade de arquivos mantidos de Mysql*
   * **app_rotation**: *Quantidade de arquivos mantidos de magento*
   * **storage_local**: *True para manter o backup local ou False para manter apenas no google*
@@ -111,12 +111,12 @@ optional arguments:
   --app            Coloque essa opção para fazer backup da aplicação.
   --db             Coloque essa opção para fazer backup do banco de dados (Mysql).
   --lista          Lista os arquivos armazenados.
-  --config CONFIG  path do caminho de configuracao.
+  --config CONFIG  path do caminho de configuração.
 ```
 
-1. Validando a conexão 
+1. Validando a conexão
 
-O primeiro e o mais importante teste para ser feito é validar a conexão com o gdrive. Para isso execute o script com a opção --lista. 
+O primeiro e o mais importante teste para ser feito é validar a conexão com o gdrive. Para isso execute o script com a opção --lista.
 ```html
 $ python3 main.py --lista
 ```
