@@ -8,21 +8,19 @@ tags: [Python, AWS, Flask, Docker, Pipeline]
 comments: true
 ---
 
-No desenvolvimento de uma aplicação moderna a única coisa que deve mudar entre os deploys nos ambientes development, homolog e poduction são as configurações.
-
-A gestão de configurações e um capítulo dos [12facter](https://12factor.net/pt_br/config)
+No desenvolvimento de uma aplicação moderna a única coisa que deve mudar entre os deploys nos ambientes development, homolog e poduction são as configurações. A gestão de configurações é um capítulo importante nos [12facter](https://12factor.net/pt_br/config).
 
 ![12factor](../img/posts/2019-03-10-deploy-environment/img1.png)
 
-Os programas que armazenam acesso a banco de dados ou outros configurações diretamente no seu código, está violando os 12fatores.
+Os sistemas que armazenam os acesso a banco de dados ou outros configurações diretamente no seu código, está violando os 12fatores.
 
 Apenas as configurações que mudam durante o deploy devem ser gerenciadas, portanto configurações como `router` ou qualquer outra configuração que não mudam durante o deploy, não devem estar na gestão de configuração.
 
-A aplicação 12fatores armazena configuração em variáveis de ambiente (env). Env vars são fáceis de mudar entre deploys sem alterar qualquer código; ao contrário de arquivos de configuração, há pouca chance de serem colocados acidentalmente no repositório do código; e ao contrário dos arquivos de configuração personalizados, ou outros mecanismos de configuração, eles são por padrão agnósticos a linguagem e ao SO.
+A aplicação 12fatores armazena configuração em variáveis de ambiente (env). EnvS são fáceis de mudar entre deploys sem alterar qualquer código; ao contrário de arquivos de configuração, há pouca chance de serem colocados acidentalmente no repositório do código; e ao contrário dos arquivos de configuração personalizados, ou outros mecanismos de configuração, eles são por padrão agnósticos a linguagem e ao SO.
 
-No modelo de configuração, precisamos armazenar os dados em um sistema centralizados, que permita que os dados sejam estruturados, para uma recuperação de dados em uma única chamada.
+No modelo de configuração, precisamos armazenar os dados em um sistema centralizado, que permita que os dados sejam estruturados, para uma recuperação de dados em uma única chamada.
  
-Esse sistema que armazena os dados também devem permitir o armazenamento de segredos (secret) e tudo controlado com controle de acesso, log e auditoria.
+Esse sistema que armazena os dados também devem permitir o armazenamento de segredos (secret) e tudo com controle de acesso, log e auditoria.
 
 ![dados](../img/posts/2019-03-10-deploy-environment/img2.png)
 
@@ -31,13 +29,13 @@ Na AWS temos 2 serviços que atendem esses critérios e são exclusivamente para
 São eles:
 
 AWS Parameter Store
- * [AWS – Documentação]()
- * [AWS - Guia]()
- * [AWS - The Right Way to Store Secrets using Parameter Store]()
+ * [AWS – Documentação](https://docs.aws.amazon.com/pt_br/systems-manager/latest/userguide/systems-manager-paramstore.html)
+ * [AWS - Guia](https://docs.aws.amazon.com/pt_br/systems-manager/latest/userguide/systems-manager-paramstore.html)
+ * [AWS - The Right Way to Store Secrets using Parameter Store](https://aws.amazon.com/pt/blogs/mt/the-right-way-to-store-secrets-using-parameter-store/)
 
 AWS Secrets Manager
- * [AWS – Documentação]()
- * [AWS - Guia]()
+ * [AWS – Documentação](https://aws.amazon.com/pt/secrets-manager/)
+ * [AWS - Guia](https://docs.aws.amazon.com/pt_br/secretsmanager/latest/userguide/intro.html)
 
 É importante reforçar que estamos falando dos serviços AWS, não estou falando de serviços montandos em cima de EC2 (Vault na AWS)
 
