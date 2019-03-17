@@ -106,7 +106,7 @@ url-pretty: "www.devops-sys.com.br"  # eg. "deanattali.com/beautiful-jekyll"
 gtag: "UA-136344991-1"
 
 # Fill in your Google Analytics ID to track your website using GA
-google_analytics: ""
+google_analytics: "136344991"
 
 # Google Tag Manager ID
 gtm: "GTM-5PP975G"
