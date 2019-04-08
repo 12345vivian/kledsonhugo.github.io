@@ -68,7 +68,7 @@ This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
 
 As outras configurações necessárias é apenas a criação do usuário no `jenkins` e no `gitlab`.
 
-![img1](https://github.com/clodonil/jenkins_shared_library/blob/master/imgs/img2.png)
+![img1](https://github.com/clodonil/jenkins_shared_library/master/imgs/img2.png)
 
 Agora temos o `jenkins` e o `gitlab` configurado corretamente.
 
