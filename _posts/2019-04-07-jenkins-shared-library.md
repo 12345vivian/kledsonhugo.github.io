@@ -1,5 +1,12 @@
-# Jenkins shared library: Tutorial `Hands-On`
-
+---
+layout: post
+title: Jenkins shared library - Tutorial `Hands-On`
+subtitle: Jenkins estruturados com shared library
+gh-repo: clodonil/clodonil.github.io
+gh-badge: [star, fork, follow]
+tags: [Jenkins, Java, Shared Library, Pipeline]
+comments: true
+---
 Vamos partir do ponto que você já conhece o `Jenkins` e já tenha alguns pipelines construídos. Se você nunca fez nenhum pipeline, mais esta estudando a melhor forma de desenvolver, esse tutorial pode contribuir com a estruturação do seu projeto.
 
 Em ambientes com muitos pipelines para projetos diferentes tornam a manutenção e administração das pipelines custosas e complexas. Para esses ambientes como eliminar a repetição de código no desenvolvimento de diferentes pipeline?
