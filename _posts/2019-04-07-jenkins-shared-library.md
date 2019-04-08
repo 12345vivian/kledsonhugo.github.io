@@ -83,7 +83,7 @@ Vamos utilizar como base a pipeline abaixo. Ela têm 5 stages.
 - **Build**: Compila o código fonte para gerar os artefatos; 
 - **Publish**: Publica os artefatos em um repositório;
 
-Vamos escrever a [pipeline](https://github.com/clodonil/jenkins_shared_library/blob/master/pipeline/jenkinsfile.groovy) em `groovy`. 
+Vamos escrever a [pipeline](https://github.com/clodonil/jenkins_shared_library/blob/master/pipeline/jenkinsfile.groovy) em `groovy`.
 
 > Conheça mais sobre [Groovy](http://groovy-lang.org/learn.html)
 
@@ -179,7 +179,7 @@ A opção *'Allow default version to be overridden'* é útil, permite especific
 
 O repositório do `shared library` segue o seguinte estrutura:
 
-- **/src/[io|org|com|other tld]/companyname/**: Local para as classes/métodos em `java` e os arquivos devem ter a extensão `.groovy`.
+- **/src/\[io|org|com|other tld\]/companyname/**: Local para as classes/métodos em `java` e os arquivos devem ter a extensão `.groovy`.
 - **/vars**: - Aqui ficam as variáveis globais e funções. Em nosso exemplo de `jenkinsfile` declarativo vamos colocar nossas funções nesse diretório.
 
 * **/resources/**: São para seus arquivos `não-Groovy`, tais como `txt`,`json` ou qualquer outro.
