@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jenkins shared library - Tutorial `Hands-On`
+title: Tutorial shared library - 'Hands-On'
 subtitle: Jenkins estruturados com shared library
 gh-repo: clodonil/clodonil.github.io
 gh-badge: [star, fork, follow]
