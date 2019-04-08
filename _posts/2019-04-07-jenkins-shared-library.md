@@ -49,7 +49,7 @@ Na configuração do jenkins, é necessário recuperar o token que está no dire
 
 Esse processo pode ser feito conectando diretamente no container como mostra a imagem a seguir.
 
-![img1](../img/posts/2019-04-07-jenkins-shared-library/img1.png))
+![img1](../img/posts/2019-04-07-jenkins-shared-library/img1.png)
 
 Também é possível listar os logs do container para obter esse token. Veja qual o processo que fica mais fácil para você.
 
@@ -150,7 +150,7 @@ Estamos falando em escrever código, portanto vamos utilizar o `gitlab` para rea
 
 Dessa forma matemos os ambientes controlados e a evolução da pipeline de Jenkins é feita como qualquer outro código.
 
-![branch](https://github.com/clodonil/jenkins_shared_library/blob/master/imgs/branch.png)
+![branch](../img/posts/2019-04-07-jenkins-shared-library/branch.png)
 
 Portanto crie no `gitlab` um repositório (criei com o nome shared) e as duas branch. Os códigos de exemplo estão no diretório [shared](https://github.com/clodonil/jenkins_shared_library/tree/master/shared/), envie para a branch de desenvolvimento.
 
@@ -161,7 +161,7 @@ Com o repositório criado, precisamos adicionar esse repositório ao Jenkins em 
 
 > `Manage Jenkins » Configure System » Global Pipeline Libraries`
 
-![jenkins](https://github.com/clodonil/jenkins_shared_library/blob/master/imgs/jenkins-shared.png)
+![jenkins](../img/posts/2019-04-07-jenkins-shared-library/jenkins-shared.png)
 
 A escolha da opção *'Load implicitl'* significa que você não precisa usar a tag `@Library` em seus pipelines para acessar sua biblioteca, mas também significa que sua biblioteca será carregada em cada pipeline, quer você queira ou não. Portanto deixamos essa opção desabilitada, e explicitamente declaramos nas pipelines, conforme abaixo.
 
@@ -195,8 +195,7 @@ As bibliotecas como exemplos são esses:
 - [shared/vars/publish.groovy](https://github.com/clodonil/jenkins_shared_library/blob/master/shared/vars/publish.groovy)
 
 
-![jenkinsExec](https://github.com/clodonil/jenkins_shared_library/blob/master/imgs/jenkins-exec.png)
-
+![jenkinsExec](../img/posts/2019-04-07-jenkins-shared-library/jenkins-exec.png)
 
 ## Multi-Tecnologia (Pipeline Standard)
 
