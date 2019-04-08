@@ -49,7 +49,7 @@ Na configuração do jenkins, é necessário recuperar o token que está no dire
 
 Esse processo pode ser feito conectando diretamente no container como mostra a imagem a seguir.
 
-![img1](https://github.com/clodonil/jenkins_shared_library/blob/master/imgs/img1.png)
+![img1](../img/posts/2019-04-07-jenkins-shared-library/master/img1.png))
 
 Também é possível listar os logs do container para obter esse token. Veja qual o processo que fica mais fácil para você.
 
@@ -68,7 +68,7 @@ This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
 
 As outras configurações necessárias é apenas a criação do usuário no `jenkins` e no `gitlab`.
 
-![img1](https://github.com/clodonil/jenkins_shared_library/master/imgs/img2.png)
+![img1](../img/posts/2019-04-07-jenkins-shared-library/master/img2.png)
 
 Agora temos o `jenkins` e o `gitlab` configurado corretamente.
 
