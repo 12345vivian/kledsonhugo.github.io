@@ -59,7 +59,7 @@ Livros que tenho interesse em lêr ou que estou lendo no ano de 2019.
 |A Máquina do Tempo | H.G Wells | 152 | <i class="fa fa-star fa-check"> | <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>   |
 |Elon Musk         | Ashlee Vance | 433 | <i class="fa fa-star fa-check"> | <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>   |
 |O fantasma de Canterville | Oscar Wilde | 70 | <i class="fa fa-star fa-check"> | <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>   |
-|Viagem ao centro da Terra | Júlio Verne |   | | |
+|Viagem ao centro da Terra | Júlio Verne | 261  |<i class="fa fa-star fa-check"> | <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>|
 |O Ladrão de casaca | Maurice Leblanc | |  | |
 |A ilha do tesouro | Robert Stevenson |264 | <i class="fa fa-star fa-check"> |<i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
 |Histórias extraordinárias|Edgar Allan Poe |132 | <i class="fa fa-star fa-check"> |<i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
