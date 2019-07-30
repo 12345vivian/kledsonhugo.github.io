@@ -42,10 +42,13 @@ Cursos que realizei no ano de 2018 e 2019.
 |Vagrant Essentials |Vagrant Essentials |  2018 | <i class="fa fa-star fa-check">| <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i>|
 | Aws Certified Sysops Administrator Aasociate     |  Udemy       | 2018   |  <i class="fa fa-star fa-check">       | <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>          |
 | Redis I  | Alura |  2018 |  <i class="fa fa-star fa-check"> |  <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i>
-| Redis II  | Alura |  2018 |  70% |  
+| Redis II  | Alura |  2018 |  70% | | 
 | Kubernetes | Alura | 2019 |  40 %| | 
 | React Parte1 | Alura | 40% ||
 | Learn Continuous Integration with Jenkins | | |
+|Python 3: Introdução a Orientação a objetos | Alura | 2019|<i class="fa fa-star fa-check"> |  <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>|
+|Testes automatizados: TDD com Python | Alura | 2019|<i class="fa fa-star fa-check"> |  <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i>|
+
 
 
 ## **Livros**
