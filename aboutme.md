@@ -54,6 +54,7 @@ Cursos que realizei no ano de 2018 e 2019.
 ## **Livros**
     
 Livros que tenho interesse em lêr ou que estou lendo no ano de 2019.
+<small>
 
 | Titulo | Autor | Pág | Status | Avaliação |
 |--------|-------|-----|--------|-----------|
@@ -74,3 +75,4 @@ Livros que tenho interesse em lêr ou que estou lendo no ano de 2019.
 |do design thinking ao design doing | Jon Kolko|280 | <i class="fa fa-star fa-check"> |<i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>|
 |O Jeito Harvard de Ser Feliz | Shawn Achor|216 | <i class="fa fa-star fa-check"> |<i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>|
 
+</small>
