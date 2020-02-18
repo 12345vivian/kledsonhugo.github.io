@@ -1,5 +1,12 @@
-# Desenvolvendo para AWS usando SandBox Local
-
+---
+layout: post
+title: Desenvolvendo para AWS usando SandBox Local
+subtitle: SandBox local
+gh-repo: clodonil/clodonil.github.io
+gh-badge: [star, fork, follow]
+tags: [AWS, Python, LocalStack, CloudFormation]
+comments: true
+---
 É muito comum nas empresas que adotam a cloud pública como AWS, pensarem em modelo para disponibilizarem recursos aos desenvolveres para aprendizado ou testes.
 
 Algumas empresas utilizam como estratégia disponibilizar a mesmo conta produtiva para testes, separando os ambientes por VPCs ou Clusters.
