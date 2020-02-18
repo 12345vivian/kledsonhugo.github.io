@@ -4,12 +4,15 @@ title: Desenvolvendo para AWS usando SandBox Local
 subtitle: SandBox local
 gh-repo: clodonil/clodonil.github.io
 gh-badge: [star, fork, follow]
-tags: [AWS, Python, LocalStack, CloudFormation]
+tags: [AWS, Python, LocalStack, Pipeline]
 comments: true
 ---
 É muito comum nas empresas que adotam a cloud pública como AWS, pensarem em modelo para disponibilizarem recursos aos desenvolveres para aprendizado ou testes.
+
 Algumas empresas utilizam como estratégia disponibilizar a mesmo conta produtiva para testes, separando os ambientes por VPCs ou Clusters.
+
 Esse ambiente em constante mudança tende a degradar e, com o passar do tempo, a segregação dos ambientes não é respeitada, gerando grande risco à operação ou ao negócio.
+
 Outras empresas liberaram uma nova conta AWS como SandBox. Aparentemente é uma boa ideia, entretanto alguns riscos estão envolvidos nesse processo.
 
 Tais como:
@@ -19,23 +22,32 @@ Tais como:
 * Risco de usar dados produtivos no ambiente de SandBox.
 
 Aqui, apresentamos uma terceira possibilidade... onde o desenvolvedor trabalha localmente e constrói a infraestrutura como código; interagindo diretamente com as API do provider de forma "mocada". Ganhando agilidade no desenvolvimento e toda a construção é realizada no computador do desenvolvedor.
+
 Neste caso, não existe uma conta AWS e muito menos uma console AWS. Considerando que uma adoção de cloud pública envolve também adotar metodologias como infraestrutura como código, não faz muito sentido liberar a console AWS para os desenvolvedores (exceto para consulta e casos excepcionais).
+
 O computador do desenvolver é o seu SandBox. Ele pode construir e destruir o ambiente quantas vezes forem necessárias, sem afetar outros projetos e sem custos.
+
 Dessa forma os desenvolvedores passam a conhecer os recursos principais da AWS através de chamadas de API local e escrever a infraestrutura em código utilizando `Terraform` ou `Cloudformation`.
+
 Após as validações locais, a solução e a sua codificação, pode ser enviada à AWS, bem como, o seu `deploy` via Pipeline.
+
 Para validar localmente, vamos utilizar o `localstack`. Se você não conhece o `localstack`, preparei um [tutorial](https://github.com/clodonil/tutorial_localstack) com os principais recursos.
+
 O `localstack` instância (localmente) os principais serviços AWS, possibilitando assim a criação de um SandBox para desenvolvimento e aprendizagem. Ele utiliza a mesma interface de API dos recursos AWS. O desenvolvedor não tem nenhum prejuízo e a experiência no desenvolvimento e a mesma se tivesse interagindo com a AWS.
 
 O ciclo de desenvolvimento proposto é:
+
 Após ter uma versão estável, o código é submetido ao git, que inicia a pipeline.
 
 A pipeline vai realizar as seguintes etapas:
+
 - Realizar o build da app;
 - Validar o cloudformation criado;
 - Validar o teste de integração usando o localstack;
 - Realiza o deploy na AWS,
 
 # Ambiente de Desenvolvimento proposto
+
 Para validar uso do localstack como SandBox, foi proposto o desenvolvimento de uma aplicação bastante simples.
 
 ![arquitetura](https://github.com/clodonil/LocalStack_PoC/raw/master/img/arquitetura.png)
@@ -177,7 +189,7 @@ Vamos validar esse primeiro passo acessando o site de frontend.
 http://localhost:4572/frontend/index.html
 
 
-![FrontEnd](img/frontend.png)
+![FrontEnd](https://github.com/clodonil/LocalStack_PoC/raw/master/img/frontend.png)
 
 Os comandos acima foram sintetizados no script [create_s3_site.sh](https://github.com/clodonil/LocalStack_PoC/blob/master/scritps/create_s3_site.sh).
 
@@ -374,8 +386,8 @@ $ aws --endpoint-url=$events events put-targets --rule ScrapyInfoProduto \
 
 Todos os scripts utilizados são chamado pelo arquivo [deploy](https://github.com/clodonil/LocalStack_PoC/blob/master/scritps/deploy.sh) que provisiona todo o ambiente de forma rápida. 
 
-![deploy](img/deploy.png)
+![deploy](https://github.com/clodonil/LocalStack_PoC/raw/master/img/deploy.png)
 
 Através de um dashboard simples, é possível acompanhar o provisionamento dos recursos:
 
-![dashboard](img/localstack.png)
+![dashboard](https://github.com/clodonil/LocalStack_PoC/raw/master/img/localstack.png)
