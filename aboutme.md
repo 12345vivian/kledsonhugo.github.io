@@ -42,9 +42,13 @@ Lista dos outros anos:
 
 |Titulo             |  Escola |Ano|Status | Avaliação | 
 |-------------------|--------|---|-------|-----------|
-|Docker for Professionals| StackSkills | 2018 | <i class="fa fa-star fa-check">|<i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i>|
-|Vagrant Essentials |Vagrant Essentials |  2018 | <i class="fa fa-star fa-check">| <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i>|
-
+|Docker for Professionals| StackSkills | 2020 | <i class="fa fa-star fa-check">|<i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i>|
+|Vagrant Essentials |Vagrant Essentials |  2020 | <i class="fa fa-star fa-check">| <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i>|
+|Managing secrets with hashicorp vault |Udemy |  2020 | <i class="fa fa-star fa-check">| <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i>|
+|Fundamentals of Programming using Python 3 |Udemy |  2020 | <i class="fa fa-star fa-check">| <i class="fa fa-star fa-lg"></i>|
+|TerraForm |Udemy |  2020 | <i class="fa fa-star fa-check">| <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i>|
+|FeedBack |Alura |  2020 | <i class="fa fa-star fa-check">| <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i>|
+|Seja lider no novo mercardo |Alura |  2020 | <i class="fa fa-star fa-check">| <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>|
 
 
 ## **Livros**
@@ -59,3 +63,8 @@ Lista dos outros anos:
 | Titulo | Autor | Pág | Status | Avaliação |
 |--------|-------|-----|--------|-----------|
 |A história da Airbnb | Leigh Gallagher  | 272 |   <i class="fa fa-star fa-check">   |  <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
+|Empresas Feitas para Vencer | Jim Collins  | 350 |   <i class="fa fa-star fa-check">   |  <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i> |
+|Essencialismo | Greg Mckeown  | 268 |     |   |
+|Decifre e influencie Pessoas | Paulo Vieira  | 223 |     |   |
+|Pipeline de Liderança | Ram Charam  | 320 |     |   |
+
