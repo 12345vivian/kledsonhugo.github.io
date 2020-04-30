@@ -49,6 +49,7 @@ Lista dos outros anos:
 |TerraForm |Udemy |  2020 | <i class="fa fa-star fa-check">| <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i>|
 |FeedBack |Alura |  2020 | <i class="fa fa-star fa-check">| <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i>|
 |Seja lider no novo mercardo |Alura |  2020 | <i class="fa fa-star fa-check">| <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>|
+|Kubernetes Up & Running | Livro |  2020 | <i class="fa fa-star fa-check">| <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i> <i class="fa fa-star fa-lg"></i><i class="fa fa-star fa-lg"></i>|
 
 
 ## **Livros**
