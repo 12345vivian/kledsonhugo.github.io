@@ -2,7 +2,7 @@
 layout: post
 title: Desenvolvendo para AWS usando SandBox Local
 subtitle: SandBox local
-gh-repo: clodonil/clodonil.github.io
+gh-repo: kledsonhugo/kledsonhugo.github.io
 gh-badge: [star, fork, follow]
 tags: [AWS, Python, LocalStack, Pipeline]
 comments: true
@@ -50,7 +50,7 @@ A pipeline vai realizar as seguintes etapas:
 
 Para validar uso do localstack como SandBox, foi proposto o desenvolvimento de uma aplicação bastante simples.
 
-![arquitetura](https://github.com/clodonil/LocalStack_PoC/raw/master/img/arquitetura.png)
+![arquitetura](https://github.com/kledsonhugo/LocalStack_PoC/raw/master/img/arquitetura.png)
 
 O usuário através do FrontEnd  cadastra um produto que deseja comprar e o preço desejado. Mediante a essa informação, é realizada uma pesquisa diária do produto no site do  `Mercado Livre` e registra os melhores preços.
 
@@ -189,9 +189,9 @@ Vamos validar esse primeiro passo acessando o site de frontend.
 http://localhost:4572/frontend/index.html
 
 
-![FrontEnd](https://github.com/clodonil/LocalStack_PoC/raw/master/img/frontend.png)
+![FrontEnd](https://github.com/kledsonhugo/LocalStack_PoC/raw/master/img/frontend.png)
 
-Os comandos acima foram sintetizados no script [create_s3_site.sh](https://github.com/clodonil/LocalStack_PoC/blob/master/scritps/create_s3_site.sh).
+Os comandos acima foram sintetizados no script [create_s3_site.sh](https://github.com/kledsonhugo/LocalStack_PoC/blob/master/scritps/create_s3_site.sh).
 
 
 ## DynamoDB
@@ -219,7 +219,7 @@ $ aws --endpoint-url=$dynamodb dynamodb create-table --table-name infos  \
       --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5
 ```
 
-Os comandos acima foram sintetizados no script [create_table_dynamodb.sh](https://github.com/clodonil/LocalStack_PoC/blob/master/scritps/create_table_dynamodb.sh).
+Os comandos acima foram sintetizados no script [create_table_dynamodb.sh](https://github.com/kledsonhugo/LocalStack_PoC/blob/master/scritps/create_table_dynamodb.sh).
 
 ## Lambda
 
@@ -230,7 +230,7 @@ Esse primeiro `lambda` só busca as URL dos produtos.
  > Em uma aplicação real, as URL pesquisadas deveriam ser aprovadas pelo usuário. Não faremos isso.
 
 
-No diretório [lambda_busca_prod](https://raw.githubusercontent.com/clodonil/LocalStack_PoC/master/lambda_busca_prod/busca_produto.py) temos toda a estrutura da função `lambda`, não vou entrar em detalhes de programação aqui, de qualquer forma, o código está em `Python` utilizando o `Boto3`.
+No diretório [lambda_busca_prod](https://raw.githubusercontent.com/kledsonhugo/LocalStack_PoC/master/lambda_busca_prod/busca_produto.py) temos toda a estrutura da função `lambda`, não vou entrar em detalhes de programação aqui, de qualquer forma, o código está em `Python` utilizando o `Boto3`.
 
 Para fazer o deploy da função `lambda` vamos criar um pacote com todos as dependências.
 
@@ -315,13 +315,13 @@ Essa função em `lamdba` vai seguir as seguintes etapas:
 * Gravar na tabela info as informações obtidas;
 * Atualizar a tabela `produto` com o preço min e max.
 
-Essa lambda está no diretório [lambda_getinfo](https://raw.githubusercontent.com/clodonil/LocalStack_PoC/master/lambda_getinfo/getinfo.py), utilizamos o mesmo procedimento da primeira `lambda` para realizar o deploy.
+Essa lambda está no diretório [lambda_getinfo](https://raw.githubusercontent.com/kledsonhugo/LocalStack_PoC/master/lambda_getinfo/getinfo.py), utilizamos o mesmo procedimento da primeira `lambda` para realizar o deploy.
 
-A terceira função `lambda` gera um relatório com os preços dos produtos. Essa função `lambda` está no diretório  [lambda_report](https://raw.githubusercontent.com/clodonil/LocalStack_PoC/master/lambda_report/report.py).
+A terceira função `lambda` gera um relatório com os preços dos produtos. Essa função `lambda` está no diretório  [lambda_report](https://raw.githubusercontent.com/kledsonhugo/LocalStack_PoC/master/lambda_report/report.py).
 
-E a última função `lambda` simula a compra do produto se estiver abaixo ou igual ao preço desejado. Essa função está no diretório [lambda_comprar](https://raw.githubusercontent.com/clodonil/LocalStack_PoC/master/lambda_comprar/comprar.py).
+E a última função `lambda` simula a compra do produto se estiver abaixo ou igual ao preço desejado. Essa função está no diretório [lambda_comprar](https://raw.githubusercontent.com/kledsonhugo/LocalStack_PoC/master/lambda_comprar/comprar.py).
 
- Nessa fase realizamos o deploy de todas as funções `lambda`. No arquivo [deploy_lambda_local.sh](https://github.com/clodonil/LocalStack_PoC/blob/master/scritps/deploy_lambda_local.sh) estão todos os comandos utilizados.
+ Nessa fase realizamos o deploy de todas as funções `lambda`. No arquivo [deploy_lambda_local.sh](https://github.com/kledsonhugo/LocalStack_PoC/blob/master/scritps/deploy_lambda_local.sh) estão todos os comandos utilizados.
 
 Utilizando o `AWS CLI`, podemos listar todas as `lambdas` provisionadas localmente:
 
@@ -346,7 +346,7 @@ A comunicação entre a `lambda` info que busca os melhores preços e a `lambda`
 $ aws --endpoint-url=$sqs sqs create-queue --queue-name fila-de-compra
 ```
 
-O script que cria o [create_sqs_sns.sh](https://github.com/clodonil/LocalStack_PoC/blob/master/scritps/create_sqs_sns.sh).
+O script que cria o [create_sqs_sns.sh](https://github.com/kledsonhugo/LocalStack_PoC/blob/master/scritps/create_sqs_sns.sh).
 
 # CloudWatch Event
 
@@ -380,14 +380,14 @@ $ aws --endpoint-url=$events events put-targets --rule ScrapyInfoProduto \
 ```
 
 
-[create_cloudwatch_event.sh](https://github.com/clodonil/LocalStack_PoC/blob/master/scritps/create_cloudwatch_event.sh)
+[create_cloudwatch_event.sh](https://github.com/kledsonhugo/LocalStack_PoC/blob/master/scritps/create_cloudwatch_event.sh)
 
 # Deploy Local
 
-Todos os scripts utilizados são chamado pelo arquivo [deploy](https://github.com/clodonil/LocalStack_PoC/blob/master/scritps/deploy.sh) que provisiona todo o ambiente de forma rápida. 
+Todos os scripts utilizados são chamado pelo arquivo [deploy](https://github.com/kledsonhugo/LocalStack_PoC/blob/master/scritps/deploy.sh) que provisiona todo o ambiente de forma rápida. 
 
-![deploy](https://github.com/clodonil/LocalStack_PoC/raw/master/img/deploy.png)
+![deploy](https://github.com/kledsonhugo/LocalStack_PoC/raw/master/img/deploy.png)
 
 Através de um dashboard simples, é possível acompanhar o provisionamento dos recursos:
 
-![dashboard](https://github.com/clodonil/LocalStack_PoC/raw/master/img/localstack.png)
+![dashboard](https://github.com/kledsonhugo/LocalStack_PoC/raw/master/img/localstack.png)
