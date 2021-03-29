@@ -17,7 +17,7 @@ baseurl: ""
 title: Cloud
 
 # Short description of your site
-description: Meus estudos sobre o mundo Cloud Computing !!!
+description: Meus estudos sobre Cloud Computing !!!
 
 # --- Navigation bar options --- #
 
@@ -67,8 +67,8 @@ author:
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
   rss: true
-  email: "ckledsonhugo@gmail.com"
-  facebook: kledsonhugo
+  email: "kledsonhugo@gmail.com"
+  facebook: kledson.basso
   github: kledsonhugo
 #  twitter: daattali
 #  reddit: yourname
