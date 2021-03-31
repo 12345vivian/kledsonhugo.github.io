@@ -2,7 +2,7 @@
 layout: post
 title: Site estático com AWS S3
 subtitle: Página html em segs/mins
-gh-repo: https://github.com/FIAP/vds/tree/master/aws/s3/static-site
+gh-repo: kledsonhugo/kledsonhugo.github.io
 gh-badge: [star, fork, follow]
 tags: [AWS, S3, web]
 comments: true
