@@ -50,7 +50,7 @@ A pipeline vai realizar as seguintes etapas:
 
 Para validar uso do localstack como SandBox, foi proposto o desenvolvimento de uma aplicação bastante simples.
 
-![arquitetura](https://github.com/kledsonhugo/kledsonhugo.github.io/blob/master/img/arquitetura.png)
+![arquitetura](https://raw.githubusercontent.com/kledsonhugo/kledsonhugo.github.io/master/img/arquitetura.png)
 
 O usuário através do FrontEnd  cadastra um produto que deseja comprar e o preço desejado. Mediante a essa informação, é realizada uma pesquisa diária do produto no site do  `Mercado Livre` e registra os melhores preços.
 
@@ -189,7 +189,7 @@ Vamos validar esse primeiro passo acessando o site de frontend.
 http://localhost:4572/frontend/index.html
 
 
-![FrontEnd](https://github.com/kledsonhugo/LocalStack_PoC/raw/master/img/frontend.png)
+![FrontEnd](https://raw.githubusercontent.com/kledsonhugo/kledsonhugo.github.io/master//img/frontend.png)
 
 Os comandos acima foram sintetizados no script [create_s3_site.sh](https://github.com/kledsonhugo/LocalStack_PoC/blob/master/scritps/create_s3_site.sh).
 
@@ -386,8 +386,8 @@ $ aws --endpoint-url=$events events put-targets --rule ScrapyInfoProduto \
 
 Todos os scripts utilizados são chamado pelo arquivo [deploy](https://github.com/kledsonhugo/LocalStack_PoC/blob/master/scritps/deploy.sh) que provisiona todo o ambiente de forma rápida. 
 
-![deploy](https://github.com/kledsonhugo/kledsonhugo.github.io/blob/master/img/deploy.png)
+![deploy](https://raw.githubusercontent.com/kledsonhugo/kledsonhugo.github.io/master//img/deploy.png)
 
 Através de um dashboard simples, é possível acompanhar o provisionamento dos recursos:
 
-![dashboard](https://github.com/kledsonhugo/kledsonhugo.github.io/blob/master/img/localstack.png)
+![dashboard](https://raw.githubusercontent.com/kledsonhugo/kledsonhugo.github.io/master//img/localstack.png)
