@@ -4,7 +4,7 @@ title: Site estático com AWS S3
 subtitle: Página html em segs/mins
 gh-repo: kledsonhugo/kledsonhugo.github.io
 gh-badge: [star, fork, follow]
-tags: [AWS, S3, web]
+tags: [AWS, S3, Web]
 comments: true
 ---
 O objetivo desta atividade é explorar na prática os conceitos de armazenamento utilizando o serviço AWS Simple Storage Service (S3). 
