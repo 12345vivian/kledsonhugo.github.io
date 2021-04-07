@@ -4,7 +4,7 @@ title: Sync do GitHub com Bucket S3
 subtitle: Objetos AWS S3 controlados por repo GitHub
 gh-repo: kledsonhugo/kledsonhugo.github.io
 gh-badge: [star, fork, follow]
-tags: [AWS, S3, web, GitHub, repo, sync]
+tags: [AWS, S3, Web, GitHub, Repo, Sync]
 comments: true
 ---
 Demonstrar como realizar sincronismo de arquivos em um repo GitHub com objetos em um Bucket S3.
