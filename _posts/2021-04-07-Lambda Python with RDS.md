@@ -43,7 +43,7 @@ O primeiro passo é criar uma base de dados RDS.
    - Initial database name: `{DB_NAME}`
    - Enable automatic backups: `desabilitado`
    - Enable auto minor version upgrade: `desabilitado`
-
+ 
      > Escolha um conteúdo a sua escolha para as variáveis `{RDS_INSTANCE_NAME}`, `{RDS_MASTER_PASSWORD}` e `{DB_NAME}` e guarde pois serão utilizados posteriormente.
 
      > Caso não exista uma **Default VPC**, crie utilizando conforme [https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html](https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html).
