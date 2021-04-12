@@ -7,7 +7,7 @@ gh-badge: [star, fork, follow]
 tags: [AWS, EFS, EC2, NFS, Storage]
 comments: true
 ---
-# Atividade de armazenamento AWS EFS (File System compartilhado) #
+# Armazenamento com AWS EFS (File System compartilhado) #
 
 Amazon Elastic File System (Amazon EFS) é um serviço que fornece um sistema de arquivos elástico simples e sem servidor.
 
