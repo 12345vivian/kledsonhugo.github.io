@@ -25,27 +25,48 @@ Para hospedar um site estático no Amazon S3, configure um bucket do Amazon S3 p
 
 3. Selecione o botão **Criar bucket**.
 
-4. Na tela de criação de bucket preencha com as informações abaixo.
+4. Na tela de criação de bucket preencha com as informações abaixo e no final da tela clique em  **Criar bucket**.
 
-   - nome: `fiap-cloud-vds-aws-s3-<SEU_NOME>`
+   - nome: `fiap-cloud-vds-aws-s3-<seu_nome>`
    - região: Selecione uma região de preferência
+   - Bloquear todo o acesso público: desabilitada
+   - Reconheço que as configurações atuais podem fazer com que este bucket e os objetos dentro dele se tornem públicos: habilitada
    - versionamento: Habilite a opção **Versionamento de Bucket**
 
-     > Mantenha as demais opções padrões. 
+   > Mantenha as demais opções padrões. 
 
 5. Clique sobre o nome do Bucket.
 
-6. No menu **Propriedades** navegue até **Hospedagem de Site estático**, clique em **Editar** e preencha as informações abaixo.
+6. No menu **Permissões** navegue até **Política do bucket**, clique em **Editar**, preencha com as informações abaixo e clique em **Salvar alterações**.
+
+    ```
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "PublicReadGetObject",
+                "Effect": "Allow",
+                "Principal": "*",
+                "Action": [
+                    "s3:GetObject"
+                ],
+                "Resource": [
+                    "arn:aws:s3:::Bucket-Name/*"
+                ]
+            }
+        ]
+    }
+    ```
+    
+    > Mantenha as demais opções padrões. 
+
+7. No menu **Propriedades** navegue até **Hospedagem de Site estático**, clique em **Editar**, preencha com as informações abaixo, guarde a url **Endpoint de site de bucket** e clique em **Salvar alterações**.
 
    - Hospedagem de site estático: `Ativar`
    - Documento de índice: `index.html`
    - Documento de erro opcional: `error.html`
 
-7. No menu **Propriedades** verifique a opção **Endpoint de site de bucket** e guarde a url conforme exemplo abaixo.
-
-   - url: `http://fiap-cloud-vds-aws-s3-<SEU_NOME>.s3-website-us-east-1.amazonaws.com`
-
-     > Guarde esta informação pois precisará a frente.
+   > Mantenha as demais opções padrões. 
 
 8. Faça download dos arquivos **index.html** e **error.html** disponíveis no repo GitHub abaixo.
  
