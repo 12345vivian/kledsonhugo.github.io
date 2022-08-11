@@ -27,11 +27,10 @@ Para hospedar um site estático no Amazon S3, configure um bucket do Amazon S3 p
 
 4. Na tela de criação de bucket preencha com as informações abaixo e no final da tela clique em  **Criar bucket**.
 
-   - nome: `fiap-cloud-vds-aws-s3-<seu_nome>`
-   - região: Selecione uma região de preferência
-   - Bloquear todo o acesso público: desabilitada
-   - Reconheço que as configurações atuais podem fazer com que este bucket e os objetos dentro dele se tornem públicos: habilitada
-   - versionamento: Habilite a opção **Versionamento de Bucket**
+   - **nome**: `fiap-cloud-vds-aws-s3-`**<seu_nome>**
+   - **região**: Norte da Virgínia
+   - **Bloquear todo o acesso público**: desabilitada
+   - **Versionamento de Bucket**: habilitado
 
      > Mantenha as demais opções padrões. 
 
@@ -58,7 +57,7 @@ Para hospedar um site estático no Amazon S3, configure um bucket do Amazon S3 p
     }
     ```
     
-      > **ATENÇÃO !!!** Substitua na Política do Bucket o texto **Bucket-Name** por `fiap-cloud-vds-aws-s3-<seu_nome>`. 
+      > **ATENÇÃO !!!** Substituao texto **Bucket-Name** por `fiap-cloud-vds-aws-s3-`**<seu_nome>**. 
     
       > Mantenha as demais opções padrões. 
 
@@ -72,7 +71,7 @@ Para hospedar um site estático no Amazon S3, configure um bucket do Amazon S3 p
    - Busque pelos arquivos baixados e clique em **Carregar**
    - Clique em **Fechar**
 
-9. No menu **Propriedades** navegue até **Hospedagem de Site estático**, clique em **Editar**, preencha com as informações abaixo, guarde a url **Endpoint de site de bucket** e clique em **Salvar alterações**.
+9. No menu **Propriedades** navegue até **Hospedagem de Site estático**, clique em **Editar**, preencha com as informações abaixo e clique em **Salvar alterações**.
 
    - Hospedagem de site estático: `Ativar`
    - Documento de índice: `index.html`
