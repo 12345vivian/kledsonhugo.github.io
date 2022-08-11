@@ -32,7 +32,7 @@ Para hospedar um site estático no Amazon S3, configure um bucket do Amazon S3 p
    - Bloquear todo o acesso público: desabilitada
    - Reconheço que as configurações atuais podem fazer com que este bucket e os objetos dentro dele se tornem públicos: habilitada
    - versionamento: Habilite a opção **Versionamento de Bucket**
-
+   
    > Mantenha as demais opções padrões. 
 
 5. Clique sobre o nome do Bucket.
