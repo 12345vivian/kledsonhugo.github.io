@@ -48,37 +48,37 @@ O segundo passo é configurar um repositório GitHub para sincronizar o conteúd
    > Substitua as variáveis `{REGIÃO_AWS}` e `{NOME_DO_BUCKET}` pelos valores capturados nos passos anteriores.
 
    ```
-      name: Sync GitHub to S3
+   name: Sync GitHub to S3
 
-      on:
-        push:
-          branches:
-          - main
+   on:
+     push:
+       branches:
+       - main
 
-      jobs:
-        deploy:
-          runs-on: ubuntu-latest
-          steps:
+   jobs:
+     deploy:
+       runs-on: ubuntu-latest
+       steps:
 
-          - name: Checkout repo
-            uses: actions/checkout@v1
+       - name: Checkout repo
+         uses: actions/checkout@v1
 
-          - name: Set Credentials
-            uses: aws-actions/configure-aws-credentials@v1
-            with:
-              aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-              aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-              aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
-              aws-region: us-east-1
+       - name: Set Credentials
+         uses: aws-actions/configure-aws-credentials@v1
+         with:
+           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+           aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
+           aws-region: us-east-1
 
-          - name: Deploy objects to S3 bucket
-            run: |
-              aws s3 sync ./ s3://iac-cp01-kledson \
-              --exclude '.git/*' \
-              --exclude '.github/*' \
-              --exclude 'README.md' \
-              --follow-symlinks \
-              --delete
+       - name: Deploy objects to S3 bucket
+         run: |
+           aws s3 sync ./ s3://iac-cp01-kledson \
+           --exclude '.git/*' \
+           --exclude '.github/*' \
+           --exclude 'README.md' \
+           --follow-symlinks \
+           --delete
    ```
 
 ## Passo 3
