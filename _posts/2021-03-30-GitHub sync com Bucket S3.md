@@ -33,7 +33,7 @@ O segundo passo é configurar um repositório GitHub para sincronizar o conteúd
 3. Em **Secrets** clique em **New repository secret** e adicione as variáveis abaixo.
 
    - **`AWS_ACCESS_KEY_ID`** : `{AWS_ACCESS_KEY_ID}`
-   - **`AWS_SECRET_ACCESS_KEY`** : `{AWS_SECRET_ACCESS_KEY}`<br/>
+   - **`AWS_SECRET_ACCESS_KEY`** : `{AWS_SECRET_ACCESS_KEY}`<br />
 
    > Substitua as variáveis `{AWS_ACCESS_KEY_ID}` e `{AWS_SECRET_ACCESS_KEY}` pelas credenciais de acesso à sua conta AWS.
 
