@@ -85,9 +85,9 @@ O segundo passo é configurar um repositório GitHub para sincronizar o conteúd
 
 O terceiro passo é alterar o conteúdo de um ou mais arquivos no repositório do GitHub e observar se o pipeline do GitHub realizou com sucesso o sincronismo com o bucket S3.
 
-1. Publique arquivos no repositório GitHub que serão sincronizados com o bucket S3.
+1. Publique alterações no arquivo **index.html** do repositório GitHub que será sincronizado com o bucket S3.
 
-   > Caso tenha dúvidas para publicar conteúdo em repositório GitHub, consulte a doc oficial em [https://docs.github.com/pt/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line](https://docs.github.com/pt/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line).
+   > Caso tenha dúvidas para publicar alterações de conteúdo em repositório GitHub, consulte a doc oficial em [https://docs.github.com/pt/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line](https://docs.github.com/pt/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line).
 
 2. No repositório GitHub acesse a opção **Actions** e verifique o status da execução do Workflow.
 
