@@ -40,43 +40,9 @@ O segundo passo é configurar um repositório GitHub para sincronizar o conteúd
 
    > Substitua as variáveis `{AWS_ACCESS_KEY_ID}`, `{AWS_SECRET_ACCESS_KEY}` e `{AWS_SESSION_TOKEN}` pelas credenciais de acesso à sua conta AWS.
 
-4. Publique no repositório GitHub o arquivo `.github/workflows/main.yml` com o conteúdo abaixo.
+4. Publique no repositório GitHub o arquivo `.github/workflows/main.yml` conforme exemplo disponível em [https://github.com/kledsonhugo/kledsonhugo.github.io/blob/master/_data/main.yml](https://github.com/kledsonhugo/kledsonhugo.github.io/blob/master/_data/main.yml).
 
    > Esse arquivo configura o Workflow de sincronismo do repositório GitHub com o bucket S3.
-
-   ```
-   name: Sync GitHub to S3
-
-   on:
-     push:
-       branches:
-       - main
-
-   jobs:
-     deploy:
-       runs-on: ubuntu-latest
-       steps:
-
-       - name: Checkout repo
-         uses: actions/checkout@v1
-
-       - name: Set Credentials
-         uses: aws-actions/configure-aws-credentials@v1
-         with:
-           aws-access-key-id: `${{ secrets.AWS_ACCESS_KEY_ID }}`
-           aws-secret-access-key: `${{ secrets.AWS_SECRET_ACCESS_KEY }}`
-           aws-session-token: `${{ secrets.AWS_SESSION_TOKEN }}`
-           aws-region: us-east-1
-
-       - name: Deploy objects to S3 bucket
-         run: |
-           aws s3 sync ./ s3://Bucket-Name \
-           --exclude '.git/*' \
-           --exclude '.github/*' \
-           --exclude 'README.md' \
-           --follow-symlinks \
-           --delete
-   ```
 
    > Substitua o texto **Bucket-Name** pelo nome do seu Bucket configurado nos passos anteriores.
 
