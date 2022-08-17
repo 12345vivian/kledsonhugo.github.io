@@ -68,7 +68,7 @@ Para hospedar um site estático no Amazon S3, configure um bucket do Amazon S3 p
 
    - Hospedagem de site estático: `Ativar`
    - Documento de índice: `index.html`
-   - Documento de erro opcional: `error.html`
+   - Documento de erro opcional: `error.html`<br/><br/>
 
    > Mantenha as demais opções padrões. 
 
