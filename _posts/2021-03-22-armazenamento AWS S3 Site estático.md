@@ -29,14 +29,14 @@ Para hospedar um site estático no Amazon S3, configure um bucket do Amazon S3 p
 
 4. Na tela de criação de bucket preencha com as informações abaixo e no final da tela clique em  **Criar bucket**.
 
-   - **nome**: `fiap-cloud-vds-aws-s3-<seu_nome>`
+   - **nome**: `Bucket-Name`
    - **região**: Norte da Virgínia
    - **Bloquear todo o acesso público**: desabilitada
    - **Versionamento de Bucket**: habilitado<br/><br/>
 
-   > **ATENÇÃO !!!** Substitua o texto <seu_nome> pelo seu primeiro nome. Ex: kledson. Mantenha as demais opções padrões. 
+   > **ATENÇÃO !!!** Substitua o texto **Bucket-Name** por um nome de Bucket qualquer. Mantenha as demais opções padrões. 
 
-5. Clique sobre o nome do Bucket.
+5. Clique sobre o nome do Bucket criado.
 
 6. No menu **Permissões** navegue até **Política do bucket**, clique em **Editar**, preencha com as informações abaixo e clique em **Salvar alterações**.
 
@@ -56,7 +56,7 @@ Para hospedar um site estático no Amazon S3, configure um bucket do Amazon S3 p
     
    > **ATENÇÃO !!!** Substitua o texto **Bucket-Name** pelo nome do bucket utilizado no passo anterior. Mantenha as demais opções padrões. 
 
-7. Faça download dos arquivos **index.html** e **error.html** do repositório GitHub abaixo.
+7. Faça download dos arquivos HTML de exemplo **index.html** e **error.html** do repositório GitHub abaixo.
  
    > GitHub repository: [https://github.com/kledsonhugo/kledsonhugo.github.io/tree/master/_data/](https://github.com/kledsonhugo/kledsonhugo.github.io/tree/master/_data/)
 
@@ -75,5 +75,7 @@ Para hospedar um site estático no Amazon S3, configure um bucket do Amazon S3 p
    > Mantenha as demais opções padrões. 
 
 10. No menu **Propriedades** navegue até **Hospedagem de Site estático** e clique na url **Endpoint de site de bucket**.
+
+    > **SUCESSO !!!** O sucesso dessa atividade será a abertura de uma página web mostrando o coneúdo do arquivo **index.html**.
 
 <br/><br/>
