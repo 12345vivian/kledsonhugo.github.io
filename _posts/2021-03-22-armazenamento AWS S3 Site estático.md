@@ -30,7 +30,7 @@ Para hospedar um site estático no Amazon S3, configure um bucket do Amazon S3 p
    - **nome**: `fiap-cloud-vds-aws-s3-<seu_nome>`
    - **região**: Norte da Virgínia
    - **Bloquear todo o acesso público**: desabilitada
-   - **Versionamento de Bucket**: habilitado
+   - **Versionamento de Bucket**: habilitado<br/><br/>
 
    > **ATENÇÃO !!!** Substitua o texto "<seu_nome>" pelo seu primeiro nome. Ex: kledson. Mantenha as demais opções padrões. 
 
