@@ -22,7 +22,7 @@ O primeiro passo é criar o Bucket S3 com a opção **site estático**.
 
 ## Passo 2
 
-O segundo passo é configurar o repositório GitHub para sincronizar com o bucket S3.
+O segundo passo é configurar um repositório GitHub para sincronizar o conteúdo com o bucket S3.
 
 1. Acesse o GitHub [https://github.com/](https://github.com/).
 
@@ -79,17 +79,18 @@ O segundo passo é configurar o repositório GitHub para sincronizar com o bucke
            --delete
    ```
 
-7. No repositório GitHub acesse a opção **Actions** e verifique o status da execução do Workflow.
+## Passo 3
+
+O terceiro passo é alterar um arquivo no repositório do GitHub e observar se o pipeline do GitHub realizou com sucesso o sincronismo com o bucket S3.
+
+1. No repositório GitHub altere o conteúdo de um arquivo.
+
+2. No repositório GitHub acesse a opção **Actions** e verifique o status da execução do Workflow.
 
    > Nesse ponto é esperado que o Workflow execute com sucesso e sincronize os arquivos do repositório GitHub com o Bucket S3.
 
+3. Faça login no AWS Console.
 
-## Passo 4
+4. Em **Serviços** selecione **S3**.
 
-Verifique no Bucket S3 se os objetos foram atualizados.
-
-1. Faça login no AWS Console.
-
-2. Em **Serviços** selecione **S3**.
-
-3. Verifique a data e hora dos objetos no bucket.
+5. Verifique a data e hora dos objetos no bucket.
