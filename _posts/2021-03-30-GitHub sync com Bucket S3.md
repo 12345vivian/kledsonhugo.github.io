@@ -38,11 +38,7 @@ O segundo passo é configurar um repositório GitHub para sincronizar o conteúd
 
    > Substitua as variáveis `{AWS_ACCESS_KEY_ID}`, `{AWS_SECRET_ACCESS_KEY}` e `{AWS_SESSION_TOKEN}` pelas credenciais de acesso à sua conta AWS.
 
-4. Publique arquivos no repositório GitHub que serão sincronizados com o bucket S3.
-
-   > Caso tenha dúvidas para publicar conteúdo em repositório GitHub, consulte a doc oficial em [https://docs.github.com/pt/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line](https://docs.github.com/pt/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line).
-
-5. Publique no repositório GitHub o arquivo `.github/workflows/main.yml` com o conteúdo abaixo.
+4. Publique no repositório GitHub o arquivo `.github/workflows/main.yml` com o conteúdo abaixo.
 
    > Esse arquivo configura o Workflow de sincronismo do repositório GitHub com o bucket S3.
 
@@ -85,9 +81,11 @@ O segundo passo é configurar um repositório GitHub para sincronizar o conteúd
 
 ## Passo 3
 
-O terceiro passo é alterar um arquivo no repositório do GitHub e observar se o pipeline do GitHub realizou com sucesso o sincronismo com o bucket S3.
+O terceiro passo é alterar o conteúdo de um ou mais arquivos no repositório do GitHub e observar se o pipeline do GitHub realizou com sucesso o sincronismo com o bucket S3.
 
-1. No repositório GitHub altere o conteúdo de um arquivo.
+1. Publique arquivos no repositório GitHub que serão sincronizados com o bucket S3.
+
+   > Caso tenha dúvidas para publicar conteúdo em repositório GitHub, consulte a doc oficial em [https://docs.github.com/pt/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line](https://docs.github.com/pt/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line).
 
 2. No repositório GitHub acesse a opção **Actions** e verifique o status da execução do Workflow.
 
