@@ -32,7 +32,9 @@ O segundo passo é configurar um repositório GitHub para sincronizar o conteúd
 
    > Referência [Criar um repositório](https://docs.github.com/pt/github/getting-started-with-github/create-a-repo).
 
-3. Em **Secrets** clique em **New repository secret** e adicione as variáveis abaixo.
+3. Em **Secrets** clique em **Actions**.
+
+4. Para cada variável abaixo clique em **New repository secret**.
 
    - **`AWS_ACCESS_KEY_ID`** : `{AWS_ACCESS_KEY_ID}`
    - **`AWS_SECRET_ACCESS_KEY`** : `{AWS_SECRET_ACCESS_KEY}`
@@ -40,7 +42,7 @@ O segundo passo é configurar um repositório GitHub para sincronizar o conteúd
 
    > Substitua as variáveis `{AWS_ACCESS_KEY_ID}`, `{AWS_SECRET_ACCESS_KEY}` e `{AWS_SESSION_TOKEN}` pelas credenciais de acesso à sua conta AWS.
 
-4. Publique no repositório GitHub o arquivo `.github/workflows/main.yml` conforme exemplo disponível em [Exemplo de GitHub Actions File](https://github.com/kledsonhugo/kledsonhugo.github.io/blob/master/_data/main.yml).
+5. Publique no repositório GitHub o arquivo `.github/workflows/main.yml` conforme exemplo disponível em [Exemplo de GitHub Actions File](https://github.com/kledsonhugo/kledsonhugo.github.io/blob/master/_data/main.yml).
 
    > Esse arquivo configura o Workflow de sincronismo do repositório GitHub com o bucket S3.
 
