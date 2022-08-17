@@ -8,7 +8,7 @@ tags: [AWS, S3, Web, GitHub, Repo, Sync]
 comments: true
 ---
 <br/><br/>
-Demonstrar como realizar sincronismo de arquivos em um repo GitHub com objetos em um Bucket S3.
+Demonstrar como realizar sincronismo de arquivos de um repo GitHub com objetos em um Bucket S3.
 
 > Referências
 - [https://docs.aws.amazon.com/cli/latest/reference/s3/sync.html](https://docs.aws.amazon.com/cli/latest/reference/s3/sync.html)
