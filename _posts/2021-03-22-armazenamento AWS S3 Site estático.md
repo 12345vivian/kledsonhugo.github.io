@@ -49,7 +49,7 @@ Para hospedar um site estático no Amazon S3, configure um bucket do Amazon S3 p
                 "Resource": "arn:aws:s3:::Bucket-Name/*"
             }
         ]
-    }    
+    }
     ```
     
    > **ATENÇÃO !!!** Substitua o texto **Bucket-Name** pelo nome do bucket utilizado no passo anterior. Mantenha as demais opções padrões. 
