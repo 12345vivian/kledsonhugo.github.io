@@ -63,14 +63,14 @@ O segundo passo é configurar um repositório GitHub para sincronizar o conteúd
        - name: Set Credentials
          uses: aws-actions/configure-aws-credentials@v1
          with:
-           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-           aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
+           aws-access-key-id: `${{ secrets.AWS_ACCESS_KEY_ID }}`
+           aws-secret-access-key: `${{ secrets.AWS_SECRET_ACCESS_KEY }}`
+           aws-session-token: `${{ secrets.AWS_SESSION_TOKEN }}`
            aws-region: us-east-1
 
        - name: Deploy objects to S3 bucket
          run: |
-           aws s3 sync ./ s3://iac-cp01-kledson \
+           aws s3 sync ./ s3://Bucket-Name \
            --exclude '.git/*' \
            --exclude '.github/*' \
            --exclude 'README.md' \
@@ -78,12 +78,12 @@ O segundo passo é configurar um repositório GitHub para sincronizar o conteúd
            --delete
    ```
 
-   > Substitua as variáveis `{REGIÃO_AWS}` e `{NOME_DO_BUCKET}` pelos valores capturados nos passos anteriores.
+   > Substitua o texto **Bucket-Name** pelo nome do seu Bucket configurado nos passos anteriores.
 
 <br/><br/>
 ## Passo 3
 
-O terceiro passo é alterar o conteúdo de um ou mais arquivos no repositório do GitHub e observar se o pipeline do GitHub realizou com sucesso o sincronismo com o bucket S3.
+O terceiro passo é alterar o conteúdo do arquivo index.html no repositório GitHub e observar se o pipeline do GitHub realizou com sucesso o sincronismo com o bucket S3.
 
 1. Publique alterações no arquivo **index.html** do repositório GitHub que será sincronizado com o bucket S3.
 
