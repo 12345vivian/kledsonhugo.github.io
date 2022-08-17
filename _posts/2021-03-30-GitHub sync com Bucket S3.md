@@ -66,7 +66,7 @@ O segundo passo é configurar o repositório GitHub para sincronizar com o bucke
          with:
            aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
            aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-           aws-region: **{REGIÃO_AWS}**
+           aws-region: {REGIÃO_AWS}
 
        - name: Deploy objects to S3 bucket
          run: |
