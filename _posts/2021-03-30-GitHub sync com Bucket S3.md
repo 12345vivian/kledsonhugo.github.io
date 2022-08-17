@@ -7,6 +7,7 @@ gh-badge: [star, fork, follow]
 tags: [AWS, S3, Web, GitHub, Repo, Sync]
 comments: true
 ---
+<br/><br/>
 Demonstrar como realizar sincronismo de arquivos em um repo GitHub com objetos em um Bucket S3.
 
 > Referências
