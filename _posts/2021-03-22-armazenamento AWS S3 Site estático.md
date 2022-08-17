@@ -33,8 +33,9 @@ Para hospedar um site estático no Amazon S3, configure um bucket do Amazon S3 p
 
    - **nome**: `Bucket-Name`
    - **região**: Norte da Virgínia (us-east-1)
-   - **ACLs desabilitadas (recomendado)**: selecionada
-   - **Bloquear todo o acesso público**: desabilitada
+   - **ACLs desabilitadas (recomendado)**: selecionado
+   - **Bloquear todo o acesso público**: desabilitado
+   - **Desativar o bloqueio de todo o acesso público ...:** selecionado
    - **Versionamento de Bucket**: habilitado
 
 5. Clique sobre o nome do Bucket criado.
