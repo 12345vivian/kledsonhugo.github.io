@@ -16,7 +16,7 @@ Demonstrar como realizar sincronismo de arquivos em um repo GitHub com objetos e
 
 ## Passo 1
 
-O primeiro passo é criar o Bucket S3 com a opção **site estático**.
+O primeiro passo é criar um Bucket S3 com a opção **Hospedagem de site estático** e com permissão **Publicamente acessível**.
 
 > Instruções em [https://kledsonhugo.github.io/2021-03-22-armazenamento-AWS-S3-Site-est%C3%A1tico/](https://kledsonhugo.github.io/2021-03-22-armazenamento-AWS-S3-Site-est%C3%A1tico/)
 
@@ -33,9 +33,10 @@ O segundo passo é configurar um repositório GitHub para sincronizar o conteúd
 3. Em **Secrets** clique em **New repository secret** e adicione as variáveis abaixo.
 
    - **`AWS_ACCESS_KEY_ID`** : `{AWS_ACCESS_KEY_ID}`
-   - **`AWS_SECRET_ACCESS_KEY`** : `{AWS_SECRET_ACCESS_KEY}`<br /><br />
+   - **`AWS_SECRET_ACCESS_KEY`** : `{AWS_SECRET_ACCESS_KEY}`
+   - **`AWS_SESSION_TOKEN`** : `{AWS_SESSION_TOKEN}`<br/><br/>
 
-   > Substitua as variáveis `{AWS_ACCESS_KEY_ID}` e `{AWS_SECRET_ACCESS_KEY}` pelas credenciais de acesso à sua conta AWS.
+   > Substitua as variáveis `{AWS_ACCESS_KEY_ID}`, `{AWS_SECRET_ACCESS_KEY}` e `{AWS_SESSION_TOKEN}` pelas credenciais de acesso à sua conta AWS.
 
 4. Publique arquivos no repositório GitHub que serão sincronizados com o bucket S3.
 
@@ -44,8 +45,6 @@ O segundo passo é configurar um repositório GitHub para sincronizar o conteúd
 5. Publique no repositório GitHub o arquivo `.github/workflows/main.yml` com o conteúdo abaixo.
 
    > Esse arquivo configura o Workflow de sincronismo do repositório GitHub com o bucket S3.
-
-   > Substitua as variáveis `{REGIÃO_AWS}` e `{NOME_DO_BUCKET}` pelos valores capturados nos passos anteriores.
 
    ```
    name: Sync GitHub to S3
@@ -80,6 +79,9 @@ O segundo passo é configurar um repositório GitHub para sincronizar o conteúd
            --follow-symlinks \
            --delete
    ```
+
+   > Substitua as variáveis `{REGIÃO_AWS}` e `{NOME_DO_BUCKET}` pelos valores capturados nos passos anteriores.
+
 
 ## Passo 3
 
