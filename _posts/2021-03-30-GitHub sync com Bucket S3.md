@@ -12,25 +12,13 @@ Demonstrar como realizar sincronismo de arquivos em um repo GitHub com objetos e
 > Referências
 - [https://docs.aws.amazon.com/cli/latest/reference/s3/sync.html](https://docs.aws.amazon.com/cli/latest/reference/s3/sync.html)
 - [https://docs.github.com/pt/actions/learn-github-actions](https://docs.github.com/pt/actions/learn-github-actions)
+- [https://kledsonhugo.github.io/2021-03-22-armazenamento-AWS-S3-Site-est%C3%A1tico/](https://kledsonhugo.github.io/2021-03-22-armazenamento-AWS-S3-Site-est%C3%A1tico/)
 
 ## Passo 1
 
-O primeiro passo é criar o Bucket S3.
+O primeiro passo é criar o Bucket S3 com a opção de site estático habilitada.
 
-1. Faça login no AWS Console.
-
-2. Em **Serviços** selecione **S3**.
-
-3. Selecione o botão **Criar bucket**.
-
-4. Na tela de criação de bucket preencha as informações abaixo.
-
-   - Nome do Bucket: `{NOME_DO_BUCKET}`
-   - Região da AWS: `selecionar conforme preferência {REGIÃO_AWS}`
-   - Desmarcar a opção `Bloquear todo o acesso público`
-   - Marcar a opção `Reconheço que as configurações atuais podem fazer com que este bucket e os objetos dentro dele se tornem públicos`
-
-     > Mantenha as demais opções padrões. 
+> Passo a passo em [https://kledsonhugo.github.io/2021-03-22-armazenamento-AWS-S3-Site-est%C3%A1tico/](https://kledsonhugo.github.io/2021-03-22-armazenamento-AWS-S3-Site-est%C3%A1tico/)
 
 ## Passo 2
 
