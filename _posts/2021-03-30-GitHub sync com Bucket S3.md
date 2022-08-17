@@ -13,14 +13,14 @@ Demonstrar como realizar sincronismo de arquivos em um repo GitHub com objetos e
 - [https://docs.aws.amazon.com/cli/latest/reference/s3/sync.html](https://docs.aws.amazon.com/cli/latest/reference/s3/sync.html)
 - [https://docs.github.com/pt/actions/learn-github-actions](https://docs.github.com/pt/actions/learn-github-actions)
 
-<br/><br/>
+<br/>
 ## Passo 1
 
 O primeiro passo é criar um Bucket S3 com a opção **Hospedagem de site estático** e com permissão **Publicamente acessível**.
 
 > Instruções em [https://kledsonhugo.github.io/2021-03-22-armazenamento-AWS-S3-Site-est%C3%A1tico/](https://kledsonhugo.github.io/2021-03-22-armazenamento-AWS-S3-Site-est%C3%A1tico/)
 
-<br/><br/>
+<br/>
 ## Passo 2
 
 O segundo passo é configurar um repositório GitHub para sincronizar o conteúdo com o bucket S3.
@@ -80,7 +80,7 @@ O segundo passo é configurar um repositório GitHub para sincronizar o conteúd
    > Substitua as variáveis `{REGIÃO_AWS}` e `{NOME_DO_BUCKET}` pelos valores capturados nos passos anteriores.
 
 
-<br/><br/>
+<br/>
 ## Passo 3
 
 O terceiro passo é alterar o conteúdo de um ou mais arquivos no repositório do GitHub e observar se o pipeline do GitHub realizou com sucesso o sincronismo com o bucket S3.
