@@ -22,17 +22,7 @@ O primeiro passo é criar o Bucket S3 com a opção de site estático habilitada
 
 ## Passo 2
 
-Configure credenciais de acesso da conta AWS que será utilizada para sincronizar o repo GitHub com o bucket S3.
-
-1. Acesse a página [https://console.aws.amazon.com/iam/home?region=us-east-1#/security_credentials$access_key](https://console.aws.amazon.com/iam/home?region=us-east-1#/security_credentials$access_key).
-
-2. Crie uma chave de acesso e capture os valores **ID da chave de acesso {AWS_ACCESS_KEY_ID}** e **Chave de acesso secreta {AWS_SECRET_ACCESS_KEY}**.
-
-   > Estas informações serão necessárias mais adiante.
-
-## Passo 3
-
-O terceiro passo é configurar o repositório GitHub e configurá-lo para sincronizar com o bucket S3.
+O segundo passo é configurar o repositório GitHub para sincronizar com o bucket S3.
 
 1. Acesse o GitHub [https://github.com/](https://github.com/).
 
