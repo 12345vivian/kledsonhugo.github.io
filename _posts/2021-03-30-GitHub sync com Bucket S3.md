@@ -26,11 +26,11 @@ O primeiro passo é criar um Bucket S3 com a opção **Hospedagem de site estát
 
 O segundo passo é configurar um repositório GitHub para sincronizar o conteúdo com o bucket S3.
 
-1. Acesse o GitHub [https://github.com/](https://github.com/).
+1. Acesse o [GitHub](https://github.com/).
 
 2. Selcione ou crie um repositório GitHub e acesse o menu **Settings**.
 
-   > Referência [https://docs.github.com/pt/github/getting-started-with-github/create-a-repo](https://docs.github.com/pt/github/getting-started-with-github/create-a-repo).
+   > Referência [Criar um repositório](https://docs.github.com/pt/github/getting-started-with-github/create-a-repo).
 
 3. Em **Secrets** clique em **New repository secret** e adicione as variáveis abaixo.
 
@@ -40,7 +40,7 @@ O segundo passo é configurar um repositório GitHub para sincronizar o conteúd
 
    > Substitua as variáveis `{AWS_ACCESS_KEY_ID}`, `{AWS_SECRET_ACCESS_KEY}` e `{AWS_SESSION_TOKEN}` pelas credenciais de acesso à sua conta AWS.
 
-4. Publique no repositório GitHub o arquivo `.github/workflows/main.yml` conforme exemplo disponível em [https://github.com/kledsonhugo/kledsonhugo.github.io/blob/master/_data/main.yml](https://github.com/kledsonhugo/kledsonhugo.github.io/blob/master/_data/main.yml).
+4. Publique no repositório GitHub o arquivo `.github/workflows/main.yml` conforme exemplo disponível em [Exemplo de GitHub Actions File](https://github.com/kledsonhugo/kledsonhugo.github.io/blob/master/_data/main.yml).
 
    > Esse arquivo configura o Workflow de sincronismo do repositório GitHub com o bucket S3.
 
@@ -53,7 +53,7 @@ O terceiro passo é alterar o conteúdo do arquivo index.html no repositório Gi
 
 1. Publique alterações no arquivo **index.html** do repositório GitHub que será sincronizado com o bucket S3.
 
-   > Caso tenha dúvidas para publicar alterações de conteúdo em repositório GitHub, consulte a doc oficial em [https://docs.github.com/pt/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line](https://docs.github.com/pt/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line).
+   > Caso tenha dúvidas para publicar alterações de conteúdo em repositório GitHub, consulte a doc oficial em [Adicionar um arquivo a um repositório](https://docs.github.com/pt/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line).
 
 2. No repositório GitHub acesse a opção **Actions** e verifique o status da execução do Workflow.
 
