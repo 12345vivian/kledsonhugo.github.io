@@ -19,7 +19,7 @@ Demonstrar como realizar sincronismo de arquivos em um repo GitHub com objetos e
 
 O primeiro passo é criar um Bucket S3 com a opção **Hospedagem de site estático** e com permissão **Publicamente acessível**.
 
-> Instruções em [https://kledsonhugo.github.io/2021-03-22-armazenamento-AWS-S3-Site-est%C3%A1tico/](https://kledsonhugo.github.io/2021-03-22-armazenamento-AWS-S3-Site-est%C3%A1tico/)
+> Instruções em [Site estático com AWS S3](https://kledsonhugo.github.io/2021-03-22-armazenamento-AWS-S3-Site-est%C3%A1tico/)
 
 <br/><br/>
 ## Passo 2
